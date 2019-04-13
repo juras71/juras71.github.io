@@ -1,0 +1,86 @@
+
+.loginFormContainer{
+    overflow-y: scroll;
+    background-color: #336b87;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+form{
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+
+}
+
+
+.btn{
+    font-size: 1.5em;
+    width: 100%;
+    background-color: #2A3132;
+    border: 0;
+    height: 2em;
+    color: white;
+}
+.btn:hover{
+    background-color: #90afc5;
+    cursor: pointer;
+}
+.form-control{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+#loginLogo{
+    width: 70px;
+    height: 70px;
+
+}
+.logoContainer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1em;
+    color: #763626;
+    text-shadow: 2px 2px 2px whitesmoke;
+    padding:10px;
+
+}
+.hidden{
+    display: none;
+}
+.signUpBtn{
+    width: 80%;
+}
+
+@media (min-width: 1024px) {
+.loginFormContainer{
+    display: flex;
+    align-items: center;
+
+    flex-flow: column nowrap;
+}
+    form{
+        width: 70%;
+    }
+    #loginLogo{
+        width: 140px;
+        height: 140px;
+
+    }
+    .logoContainer{
+        font-size: 1.6em;
+    }
+}

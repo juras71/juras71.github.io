@@ -1,0 +1,9 @@
+.avatar{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+.profileHeader{
+    display: flex;
+    align-items: center;
+}

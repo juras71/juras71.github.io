@@ -1,0 +1,39 @@
+.newGroupForm{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+
+.newGroupForm li input{
+    width: 100%;
+}
+.newGroupForm li label{
+    display: inline-block;
+    width: 16em;
+}
+
+li{
+    margin-bottom: 10px;
+}
+.newGroupForm input,
+.chooseSport
+{
+    background-color: white;
+
+    height: 2em;
+    border: 0;
+    margin-top: 5px;
+}
+#submitNewGroup{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    font-size: 3em;
+
+    color: white;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}

@@ -1,0 +1,58 @@
+.HolyGrail-nav li {
+
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    font-size: 1.1em;
+}
+.HolyGrail-nav>li:hover{
+    color: white ;
+    background: #336b87;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.HolyGrail-nav{
+    background: #2A3132;
+    padding-top: 20px;
+}
+.menuBtn{
+    color: white;
+    height: 7vh;
+    width: 7vh;
+    background-color: #2A3132;
+    border: 0;
+    border-radius: 0;
+    font-size: 2em;
+}
+.HolyGrail-nav li:before, .HolyGrail-nav li:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.5s;
+}
+
+.HolyGrail-nav li:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+.HolyGrail-nav li:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.HolyGrail-nav li:hover:before,.HolyGrail-nav li:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}

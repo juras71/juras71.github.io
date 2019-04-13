@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Lato', sans-serif;
+
+}
+body{
+    position: relative;
+
+}
+#logo{
+    width: 6vh;
+    height: 6vh;
+}
+#header>.mainContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    color: #763626;
+    text-shadow: 2px 2px 2px whitesmoke;
+
+}
+#header>.mainContainer>h1{
+    font-family: 'Kaushan Script', cursive;
+    margin-left: 20px;
+}
+#header>.mainContainer>img{
+
+}
+
+.HolyGrail,
+.HolyGrail-body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.HolyGrail-body{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.HolyGrail-nav {
+    order: -1;
+
+}
+
+
+#header,
+#footer{
+    background: #90afc5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+#header{
+    height: 40vh;
+}
+#main{
+    display: flex;
+    justify-content: flex-start;
+    background: #336b87;
+    width: 100%;
+
+
+}
+
+.HolyGrail-content{
+    display: flex;
+    flex-flow: column nowrap;
+    background: #2A3132;
+}
+.mainContent{
+
+    padding: 20px;
+    color: white;
+
+}
+.mainContent>li{
+    background: #336b87;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+
+@media (min-width: 1024px) {
+    .sticky {
+        position: fixed;
+
+    }
+
+    #main{
+        justify-content: center;
+
+
+    }
+    #header>.mainContainer{
+
+        font-size: 1.6em;
+
+
+    }
+    .mainContainer{
+        width: calc(100vw - 12em);
+
+    }
+
+    .HolyGrail-body {
+        flex-flow: row wrap;
+        flex: 1;
+
+
+    }
+    .HolyGrail-body>.mainContainer{
+        display: flex;
+
+    }
+
+    .HolyGrail-content {
+        flex: 1;
+        margin: 20px;
+        margin-left: 12em;
+        height: auto;
+        min-height: 86vh;
+    }
+    .HolyGrail-nav, .HolyGrail-ads {
+        /* 12em is the width of the columns */
+        flex: 0 0 12em;
+    }
+    .HolyGrail-nav{
+        position: absolute;
+        z-index: 1;
+        top: 40vh;
+        left: 2vh;
+
+    }
+    .newGroupForm li label{
+        display: inline-block;
+        width: 42.7em;
+    }
+}
