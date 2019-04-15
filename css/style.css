@@ -11,8 +11,9 @@ body{
 
 }
 #logo{
-    width: 6vh;
-    height: 6vh;
+    width: 9vh;
+    height: 9vh;
+    margin-left: 7vh;
 }
 #header>.mainContainer{
     display: flex;
@@ -20,16 +21,18 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 0.8em;
-    color: #763626;
-    text-shadow: 2px 2px 2px whitesmoke;
+    color: floralwhite;
+    text-shadow: 2px 2px 2px #763626;
 
 }
 #header>.mainContainer>h1{
-    font-family: 'Kaushan Script', cursive;
-    margin-left: 20px;
+    font-family: 'Shrikhand', cursive;
+    margin-left: 0.5vh;
+    font-size: 2.2em;
 }
 #header>.mainContainer>img{
-
+width: 9vh;
+    margin-left: 10vh;
 }
 
 .HolyGrail,
@@ -62,7 +65,7 @@ body{
     z-index: 100;
 }
 #header{
-    height: 40vh;
+    height: 10vh;
 }
 #main{
     display: flex;
@@ -93,6 +96,9 @@ body{
 
 
 @media (min-width: 1024px) {
+    #header{
+        height: 40vh;
+    }
     .sticky {
         position: fixed;
 

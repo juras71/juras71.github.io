@@ -11,9 +11,9 @@ export default class Header extends React.Component{
             return (
                 <header id="header">
                     <div className="mainContainer">
-                        <img src='./images/logo.png' alt="logo" id="logo" />
+                        <img src='./images/logo.png' alt="logo" className="logo" />
                         <h1>
-                            Find the playah!
+                            TEAMMATES
                         </h1>
                     </div>
                 </header>

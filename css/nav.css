@@ -20,12 +20,12 @@
 }
 .menuBtn{
     color: white;
-    height: 7vh;
-    width: 7vh;
+    height: 10vh;
+    width: 10vh;
     background-color: #2A3132;
     border: 0;
     border-radius: 0;
-    font-size: 2em;
+    font-size: 3em;
 }
 .HolyGrail-nav li:before, .HolyGrail-nav li:after
 {

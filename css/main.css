@@ -2,6 +2,7 @@
     display: none;
 }
 .menuBar{
+    height: 10vh;
     position: fixed;
     top: 0;
     left: 0;

@@ -37,6 +37,8 @@ export default class NewEvent extends React.Component {
     };
     fetchPostNewEvent = (event)=>{
         event.preventDefault();
+        let submitNewEventBtn = document.getElementById('submitNewEventBtn');
+        console.log(submitNewEventBtn);
         const newEvent = {
             eventName : this.state.eventName,
             sport: this.state.sport,
@@ -50,6 +52,16 @@ export default class NewEvent extends React.Component {
         let addEvent = fire.database().ref('events');
         let newEv  = addEvent.push(newEvent);
         console.log(newEv.key);
+        submitNewEventBtn.value = `Gratulacje! Stworzyłeś nowe wydarzenie o nazwie ${this.state.eventName} ! `;
+
+        this.setState({
+            eventName: '',
+            sport: '',
+            city: '',
+            time : '',
+            members: '',
+            admin: '',
+        });
 
     };
     render() {

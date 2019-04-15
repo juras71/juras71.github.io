@@ -75,9 +75,9 @@ class Login extends Component {
     render() {
         return (
             <div className="loginFormContainer">
-                <div className="logoContainer"><img src='./images/logo.png' alt="logo" id="loginLogo" />
+                <div className="logoContainer"><img src='./images/logo.png' alt="logo" className="logo" />
                     <h1>
-                        Find the playah!
+                        TEAMMATES
                     </h1>
                 </div>
 
