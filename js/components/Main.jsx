@@ -23,7 +23,6 @@ export default class Main extends React.Component{
             userInfo : this.readUsers(),
             groupInfo:this.readGroups(),
             eventInfo: this.readEvents(),
-            evInfo: this.readEvent(),
 
         }
     }
@@ -70,16 +69,7 @@ export default class Main extends React.Component{
             console.log("Error: " + error.code);
         });
     };
-    readEvent = ()=>{
-        let readEvent = fire.database().ref(`events/${localStorage.getItem('eventID').toString()}`);
-        readEvent.on("value", (data)=> {
-            this.setState({
-                eventInfo :data.val()
-            })
-        }, function (error) {
-            console.log("Error: " + error.code);
-        });
-    };
+
     readGroups = ()=>{
         let readGroups = fire.database().ref('groups');
         readGroups.on("value", (data)=> {
@@ -101,7 +91,7 @@ export default class Main extends React.Component{
             tab: 'event'
 
         })
-    }
+    };
 
     render() {
         let test = ()=>{
