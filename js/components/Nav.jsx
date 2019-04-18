@@ -20,6 +20,7 @@ export default class Nav extends React.Component {
 
     logout() {
         fire.auth().signOut();
+        location.reload();
     }
     handleNavClick(sth){
         this.props.handleNavigation(sth);
