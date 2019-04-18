@@ -1,12 +1,15 @@
 import React from "react";
-import NewEvent from "./NewEvent.jsx"
+
 
 export default class Events extends React.Component {
     constructor(props) {
         super(props)
 
     }
+    handleEventClick(){
+        this.props.handleEventClick();
 
+    }
 
     render() {
         let eventInfo = this.props.eventInfo;
@@ -17,7 +20,8 @@ export default class Events extends React.Component {
                     {Object.keys(eventInfo).map((key, index) => {
                         return (
                             <li key={index}>
-                                <h2> {eventInfo[key].eventName}</h2>
+                                <img className="sportLogo" alt={eventInfo[key].sport} src={`./images/sports/${eventInfo[key].sport}.png`}/>
+                                <h2 className="eventHeader" onClick={()=>{this.handleEventClick(); localStorage.setItem('eventID', key)}}> {eventInfo[key].eventName}</h2>
                                 <ul>
                                     <li>
                                         Miasto : {eventInfo[key].city}

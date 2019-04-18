@@ -10,7 +10,8 @@ import "./../../css/main.css"
 import NewEvent from "./NewEvent.jsx";
 import fire from "../config/firebase";
 import NewGroup from "./NewGroup.jsx";
-import addNewUser from  "./Login.jsx"
+import Event from "./Event.jsx";
+
 
 
 
@@ -22,6 +23,7 @@ export default class Main extends React.Component{
             userInfo : this.readUsers(),
             groupInfo:this.readGroups(),
             eventInfo: this.readEvents(),
+            evInfo: this.readEvent(),
 
         }
     }
@@ -33,28 +35,7 @@ export default class Main extends React.Component{
     })
     }
 
-    fetchUsers = ()=>{
-        fetch(`http://localhost:3000/users/${this.props.user}`).then(r=>r.json()).then(data=>{
 
-            this.setState({
-                userInfo: data
-            })
-        })
-    };
-    fetchGroups = ()=>{
-        fetch("http://localhost:3000/groups/").then(r=>r.json()).then(data=>{
-            this.setState({
-                groupInfo: data
-            })
-        })
-    };
-    fetchEvents = ()=>{
-        fetch("http://localhost:3000/events/").then(r=>r.json()).then(data=>{
-            this.setState({
-                eventInfo: data
-            })
-        })
-    };
     readUsers = ()=>{
 
         let readUsers = fire.database().ref('users');
@@ -89,6 +70,16 @@ export default class Main extends React.Component{
             console.log("Error: " + error.code);
         });
     };
+    readEvent = ()=>{
+        let readEvent = fire.database().ref(`events/${localStorage.getItem('eventID').toString()}`);
+        readEvent.on("value", (data)=> {
+            this.setState({
+                eventInfo :data.val()
+            })
+        }, function (error) {
+            console.log("Error: " + error.code);
+        });
+    };
     readGroups = ()=>{
         let readGroups = fire.database().ref('groups');
         readGroups.on("value", (data)=> {
@@ -105,6 +96,12 @@ export default class Main extends React.Component{
             tab : selectedTab
         })
     };
+    handleEventClick = ()=> {
+        this.setState({
+            tab: 'event'
+
+        })
+    }
 
     render() {
         let test = ()=>{
@@ -117,6 +114,7 @@ export default class Main extends React.Component{
             else if (tab==='events'){
                 return <Events
                     eventInfo = {this.state.eventInfo}
+                    handleEventClick = {this.handleEventClick}
                 />
             }
             else if (tab==='profile'){
@@ -138,6 +136,13 @@ export default class Main extends React.Component{
             else if (tab==='addEvent'){
                 return <NewEvent
                     user = {this.props.user}
+                />
+            }
+            else if (tab==='event'){
+                return <Event
+                    eventInfo = {this.state.eventInfo}
+                    userInfo = {this.state.userInfo}
+
                 />
             }
 

@@ -8,3 +8,26 @@
     left: 0;
     z-index: 110;
 }
+.eventHeader:hover{
+    font-size: 2em;
+    color: firebrick;
+    cursor: pointer;
+}
+.sportLogo{
+    width: 3.7em;
+    float: left;
+    margin-top: 0.8vh;
+    margin-right: 0.8vh;
+    border-radius: 50%;
+    background: white;
+
+}
+.eventSlot,.eventMember{
+    width: 3em;
+    margin: 0.2em;
+    border-radius: 50%;
+    background: white;
+}
+.eventSlot:hover{
+    background: lime;
+}
