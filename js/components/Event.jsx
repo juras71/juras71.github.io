@@ -8,7 +8,7 @@ export default class Event extends React.Component {
 
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
-        console.log(eventInfo);
+        console.log(eventInfo.members);
         let userInfo = this.props.userInfo;
 
 

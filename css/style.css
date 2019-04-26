@@ -34,6 +34,10 @@ body{
     width: 9vh;
     margin-left: 10vh;
 }
+.logo{
+    width: 9vh;
+
+}
 
 .HolyGrail,
 .HolyGrail-body {
@@ -57,6 +61,7 @@ body{
 
 #header,
 #footer{
+    box-shadow: 0 0 2px whitesmoke;
     background: #90afc5;
     width: 100%;
     display: flex;
@@ -82,12 +87,14 @@ body{
     background: #2A3132;
 }
 .mainContent{
-
     padding: 20px;
     color: white;
+    box-shadow: 0 0 10px #336b87;
+    height: 100%;
 
 }
 .mainContent>li{
+    box-shadow: 0 0 2px whitesmoke;
     background: #336b87;
     margin-bottom: 20px;
     padding: 10px;

@@ -39,19 +39,14 @@ export default class Main extends React.Component{
 
         let readUsers = fire.database().ref('users');
         readUsers.on("value", (data)=> {
-            console.log('data', data.val())
             {Object.keys(data.val()).map((item ,key, index)=>{
-                console.log(data.val()[item].id.toString(),data.val()[item].id.toString()===localStorage.getItem('userid').toString(),localStorage.getItem('userid').toString());
-
                 if (data.val()[item].id.toString()===localStorage.getItem('userid').toString()){
-                    console.log('działa');
+
                     this.setState({
                         userInfo :data.val()[item],
                     })
                 }
-                else {
-                    console.log('nie działa')
-                }
+
             })}
 
 

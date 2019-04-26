@@ -39,6 +39,12 @@ export default class NewEvent extends React.Component {
         event.preventDefault();
         let submitNewEventBtn = document.getElementById('submitNewEventBtn');
         console.log(submitNewEventBtn);
+        submitNewEventBtn.disabled=true;
+        submitNewEventBtn.style.animation = 'loading 2s 0s 1 none ';
+        setTimeout(()=> { submitNewEventBtn.style.display='none'; }, 1500);
+
+
+
         const newEvent = {
             eventName : this.state.eventName,
             sport: this.state.sport,
@@ -52,8 +58,6 @@ export default class NewEvent extends React.Component {
         let addEvent = fire.database().ref('events');
         let newEv  = addEvent.push(newEvent);
         console.log(newEv.key);
-        submitNewEventBtn.value = `Gratulacje! Stworzyłeś nowe wydarzenie o nazwie ${this.state.eventName} ! `;
-
         this.setState({
             eventName: '',
             sport: '',
@@ -109,14 +113,20 @@ export default class NewEvent extends React.Component {
                                     value={this.state.sport}
                                     onChange={this.handleSportChange}
                                 >
-                                    <option value="football">Football</option>
-                                    <option value="basketball">Basketball</option>
-                                    <option value="tennis">Tennis</option>
-                                    <option value="swimming">Swimming</option>
+                                    <option value="football">Piłka nożna</option>
+                                    <option value="basketball">Koszykówka</option>
+                                    <option value="tennis">Tenis ziemny</option>
+                                    <option value="swimming">Pływanie</option>
+                                    <option value="volleyball">Siatkówka</option>
+                                    <option value="squash">Squash</option>
+                                    <option value="golf">Golf</option>
+                                    <option value="handball">Piłka ręczna</option>
+                                    <option value="hockey">Hokej</option>
+                                    <option value="running">Bieganie</option>
                                 </select>
                             </label>
                             </li>
-                            <li><label><input type="submit"  id="submitNewEventBtn" value="&#x271A;"/></label>
+                            <li><label><h2 className="hidden">Gratulacje! Właśnie dodałeś nowe wydarzenie o nazwie: {this.state.eventName}</h2><input type="submit"  id="submitNewEventBtn" value="&#x271A;"/></label>
                             </li>
                         </ul>
                     </form>

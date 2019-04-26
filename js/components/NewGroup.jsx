@@ -71,10 +71,16 @@ export default class NewGroup extends React.Component {
                                     value={this.state.sport}
                                     onChange={this.handleSportChange}
                                 >
-                                    <option value="football">Football</option>
-                                    <option value="basketball">Basketball</option>
-                                    <option value="tennis">Tennis</option>
-                                    <option value="swimming">Swimming</option>
+                                    <option value="football">Piłka nożna</option>
+                                    <option value="basketball">Koszykówka</option>
+                                    <option value="tennis">Tenis ziemny</option>
+                                    <option value="swimming">Pływanie</option>
+                                    <option value="volleyball">Siatkówka</option>
+                                    <option value="squash">Squash</option>
+                                    <option value="golf">Golf</option>
+                                    <option value="handball">Piłka ręczna</option>
+                                    <option value="hockey">Hokej</option>
+                                    <option value="running">Bieganie</option>
                                 </select>
                             </label>
                             </li>

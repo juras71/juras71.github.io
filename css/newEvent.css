@@ -37,3 +37,20 @@ li{
     align-items: center;
     float: right;
 }
+@keyframes loading {
+    0% {
+        background: red;
+        transform: rotate(180deg) scale(1.2);
+    }
+    33%{
+        background: yellow;
+        transform: rotate(180deg) scale(1.0);
+    }
+    66%{
+        background: linear-gradient(gold,yellowgreen);
+    }
+    100% {
+
+        display: none;
+    }
+}

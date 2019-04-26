@@ -1,33 +1,89 @@
 .hidden {
     display: none;
 }
-.menuBar{
+
+.menuBar {
     height: 10vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 110;
 }
-.eventHeader:hover{
+
+.eventHeader:hover {
     font-size: 2em;
     color: firebrick;
     cursor: pointer;
 }
-.sportLogo{
-    width: 3.7em;
+
+.sportLogo {
+    width: 4em;
     float: left;
     margin-top: 0.8vh;
     margin-right: 0.8vh;
-    border-radius: 50%;
+    border-radius: 30%;
     background: white;
+    border: 2px solid black;
+    box-shadow: 3px 3px darkslategrey;
 
 }
-.eventSlot,.eventMember{
-    width: 3em;
+
+.eventSlot, .eventMember {
+    width: 2.8em;
     margin: 0.2em;
-    border-radius: 50%;
+    border-radius: 0 50% 0 0;
     background: white;
+    border-bottom: 10px solid firebrick;
+    box-shadow: 3px 3px darkslategrey;
 }
-.eventSlot:hover{
-    background: lime;
+
+.slots {
+    margin-top: 1em;
+    position: relative;
+}
+
+.slots:after {
+    content: '';
+    width: 2.8em;
+    height: 2.8em;
+    background: black;
+    opacity: 0.6;
+    border-radius: 0 50% 0 0;
+    position: absolute;
+    right: 0.45em;
+    bottom: 1em;
+}
+
+.counter {
+    position: absolute;
+    right: 1.15em;
+    bottom: 1.4em;
+    z-index: 100;
+}
+
+.eventSlot:hover {
+    background: darkseagreen;
+}
+
+@media (min-width: 1024px) {
+    .numInfo {
+        float: right;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+
+
+    }
+
+    .evContainer {
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+
+    }
+    .slots:after{
+        right: 0.22em;
+        bottom: 0.85em;
+    }
+
 }

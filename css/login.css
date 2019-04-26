@@ -9,6 +9,9 @@
     flex-flow: column nowrap;
     align-items: center;
 }
+.logo{
+    width: 9vh;
+}
 
 form{
     width: 80%;

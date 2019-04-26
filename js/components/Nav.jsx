@@ -36,7 +36,7 @@ export default class Nav extends React.Component {
                     <li onClick={() => this.handleNavClick('groups')}>GRUPY</li>
                     <li id="eventLi" onClick={() => this.handleNavClick('events')}>WYDARZENIA</li>
                     <li onClick={() => this.handleNavClick('addEvent')}>DODAJ WYDARZENIE</li>
-                    <li onClick={() => this.handleNavClick('addGroup')}>CZATY</li>
+                    <li onClick={() => this.handleNavClick('addGroup')}>DODAJ GRUPĘ</li>
                     <li onClick={() => this.handleNavClick('friends')}>ZNAJOMI</li>
                     <li className="logoutBtn"  onClick={this.logout}>WYLOGUJ</li>
                 </ul>
@@ -53,7 +53,7 @@ export default class Nav extends React.Component {
                     <li onClick={() => this.handleNavClick('groups')}>GRUPY</li>
                     <li id="eventLi" onClick={() => this.handleNavClick('events')}>WYDARZENIA</li>
                     <li onClick={() => this.handleNavClick('addEvent')}>DODAJ WYDARZENIE</li>
-                    <li onClick={() => this.handleNavClick('chats')}>CZATY</li>
+                    <li onClick={() => this.handleNavClick('addGroup')}>DODAJ GRUPĘ</li>
                     <li onClick={() => this.handleNavClick('friends')}>ZNAJOMI</li>
                     <li className="logoutBtn"  onClick={this.logout}>WYLOGUJ</li>
                 </ul>

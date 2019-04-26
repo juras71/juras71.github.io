@@ -117,10 +117,16 @@ class Login extends Component {
                             value={this.state.sport}
                             onChange={this.handleChange}
                         >
-                            <option value="football">Football</option>
-                            <option value="basketball">Basketball</option>
-                            <option value="tennis">Tennis</option>
-                            <option value="swimming">Swimming</option>
+                            <option value="football">Piłka nożna</option>
+                            <option value="basketball">Koszykówka</option>
+                            <option value="tennis">Tenis ziemny</option>
+                            <option value="swimming">Pływanie</option>
+                            <option value="volleyball">Siatkówka</option>
+                            <option value="squash">Squash</option>
+                            <option value="golf">Golf</option>
+                            <option value="handball">Piłka ręczna</option>
+                            <option value="hockey">Hokej</option>
+                            <option value="running">Bieganie</option>
                         </select>
                     <label>Avatar:</label>
                     <select

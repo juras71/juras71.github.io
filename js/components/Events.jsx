@@ -19,7 +19,7 @@ export default class Events extends React.Component {
                 <ul className="mainContent">
                     {Object.keys(eventInfo).map((key, index) => {
                         return (
-                            <li key={index}>
+                            <li key={index} className="evContainer">
                                 <img className="sportLogo" alt={eventInfo[key].sport} src={`./images/sports/${eventInfo[key].sport}.png`}/>
                                 <h2 className="eventHeader" onClick={()=>{this.handleEventClick(); localStorage.setItem('eventID', key)}}> {eventInfo[key].eventName}</h2>
                                 <ul>
@@ -35,15 +35,19 @@ export default class Events extends React.Component {
                                     <li>
                                         Dyscyplina sportu: {eventInfo[key].sport}
                                     </li>
-                                    <li>
+                                    <div className="numInfo">
+                                        <p>
                                         Maksymalna liczba uczestników : {eventInfo[key].members[0]}
-                                    </li>
-                                    <li>
+                                    </p>
+                                    <p>
                                         Wolnych miejsc : {parseInt(eventInfo[key].members[0]) - eventInfo[key].members.length + 1}
-                                    </li>
-                                    <li>
-                                        Dołącz
-                                    </li>
+                                    </p>
+                                    <p className="slots">
+                                        {[...Array(5)].map((e, i) => <img alt={eventInfo.sport} className="eventSlot" src={`./images/sports/${eventInfo[key].sport}.png`} key={i}/>)}
+                                    <span className='counter'>{eventInfo[key].members[0]-5}</span>
+                                    </p>
+
+                                    </div>
 
                                 </ul>
 
