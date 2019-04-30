@@ -62,6 +62,7 @@ class Login extends Component {
             sports: [`${this.state.sport}`] ,
             avatar : this.state.avatar,
             groups : ['brak grup'],
+            events : [''],
         };
         let addNewUser  = addUser.push(newUser);
         console.log(addNewUser.key,'ten klucz zamiast ŁYSY');

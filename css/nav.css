@@ -25,7 +25,9 @@
     border: 0;
     border-radius: 0;
     font-size: 3em;
-    position: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 .HolyGrail-nav li:before, .HolyGrail-nav li:after
 {
