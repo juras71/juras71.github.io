@@ -120,7 +120,7 @@ export default class Main extends React.Component{
             }
             else if (tab==='addEvent'){
                 return <NewEvent
-                    user = {this.props.user}
+                    userInfo = {this.state.userInfo}
                 />
             }
             else if (tab==='event'){

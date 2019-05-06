@@ -50,8 +50,8 @@ export default class NewEvent extends React.Component {
             sport: this.state.sport,
             city: this.state.city,
             time: [this.state.date,this.state.time],
-            members: [this.state.members,this.props.user],
-            admin: this.props.user,
+            members: [this.state.members,this.props.userInfo.id],
+            admin: this.props.userInfo.id,
         };
 
 

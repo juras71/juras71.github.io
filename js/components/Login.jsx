@@ -18,6 +18,7 @@ class Login extends Component {
             age:'',
             avatar : 'avat1.png',
             sport : 'football',
+            avatars: 'athlete.png',
 
         };
     }
@@ -60,8 +61,8 @@ class Login extends Component {
             id : this.state.email,
             age:this.state.age,
             sports: [`${this.state.sport}`] ,
-            avatar : this.state.avatar,
-            groups : ['brak grup'],
+            avatar : this.state.avatars,
+            groups : [''],
             events : [''],
         };
         let addNewUser  = addUser.push(newUser);
@@ -137,8 +138,24 @@ class Login extends Component {
                     <option value="avat1.png">1</option>
                     <option value="avat2.png">2</option>
                     </select>
+
+                    <div className="cc-selector">
+                        <input id="acrobat" type="radio"  value="acrobat.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio acrobat" htmlFor="acrobat"></label>
+                        <input id="athlete" type="radio" value="athlete.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio athlete" htmlFor="athlete" ></label>
+                        <input id="boxer" type="radio" value="boxer.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio boxer" htmlFor="boxer"></label>
+                        <input id="cyclist" type="radio" value="cyclist.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio cyclist" htmlFor="cyclist"></label>
+                        <input id="fitness" type="radio" value="fitness.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio fitness" htmlFor="fitness"></label>
+                        <input id="basketball" type="radio" value="basketball.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio basketball" htmlFor="basketball"></label>
+                    </div>
                     <button type="submit"  className="btn btn-success" >Zarejestruj się</button>
                 </form>
+
 
 
             </div>

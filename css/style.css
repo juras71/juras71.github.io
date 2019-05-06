@@ -98,6 +98,7 @@ body{
     background: #336b87;
     margin-bottom: 20px;
     padding: 10px;
+    min-height: 7em;
 }
 
 
@@ -161,3 +162,62 @@ body{
         width: 42.7em;
     }
 }
+
+.cc-selector input:active +.avatarRadio{opacity: .9;}
+.cc-selector input:checked +.avatarRadio{
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+}
+.athlete{
+    background-image: url("./../images/avatars/athlete.png");
+}
+.acrobat{
+    background-image: url("./../images/avatars/acrobat.png");
+}
+.cyclist{
+    background-image: url("./../images/avatars/cyclist.png");
+}
+.fitness{
+    background-image: url("./../images/avatars/fitness.png");
+}
+.basketball{
+    background-image: url("./../images/avatars/basketball.png");
+}
+.boxer{
+    background-image: url("./../images/avatars/boxer.png");
+}
+.avatarRadio{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:100px;height:70px;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+    -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+    filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.avatarRadio:active{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+.subNavBtn{
+    background: white;
+    border-radius: 10%;
+    display: inline-block;
+    width: 10em;
+    height: 5em;
+    margin: 1em;
+
+}
+
