@@ -98,7 +98,6 @@ body{
     background: #336b87;
     margin-bottom: 20px;
     padding: 10px;
-    min-height: 7em;
 }
 
 
@@ -211,13 +210,57 @@ body{
     -moz-appearance:none;
     appearance:none;
 }
+.subNav{
+    margin: -10px;
+    display: flex;
+    flex-flow: row wrap;
+}
 .subNavBtn{
-    background: white;
-    border-radius: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: inline-block;
-    width: 10em;
-    height: 5em;
-    margin: 1em;
+    width: 33.33%;
+    height: 4em;
+    border: 1px solid lightblue;
+    color: #FFFFFF;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
 
+.subNavBtn:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.subNavBtn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.chat{
+    background-color: #90afc5;
+    background-image: url("./../images/support.png");
+}
+.joinEvent{
+    background-color: springgreen;
+    background-image: url("./../images/user.png");
+}
+.membersList{
+    background-color: #336b87;
+    background-image: url("./../images/group.png");
 }
 

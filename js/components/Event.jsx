@@ -1,6 +1,7 @@
 import React from "react";
 import fire from "./../config/firebase.js"
 
+
 export default class Event extends React.Component {
     constructor(props) {
         super(props)
@@ -89,8 +90,9 @@ export default class Event extends React.Component {
                 <ul className="mainContent">
                     <li>
                         <div className="subNav">
-                            <button className="subNavBtn" onClick={this.joinEvent}>Dołącz!</button>
-                            <button  className="subNavBtn" onClick={this.loadMembers}>Dawaj gienek</button>
+                           <button className="subNavBtn chat"></button>
+                            <button  className="subNavBtn membersList" onClick={this.loadMembers}></button>
+                            <button className="subNavBtn joinEvent" onClick={this.joinEvent}>DOŁĄCZ!</button>
                         </div>
                     </li>
 
