@@ -1,11 +1,15 @@
 .HolyGrail-nav li {
 
     color: white;
+    background: #2A3132;
     font-weight: bold;
-    padding: 20px;
+    padding: 10px;
+    width: 100vw;
+    border: 2px solid white;
     text-align: center;
     position: relative;
     font-size: 1.1em;
+    margin: auto;
 }
 .HolyGrail-nav>li:hover{
     color: white ;
@@ -14,9 +18,7 @@
     cursor: pointer;
 
 }
-.HolyGrail-nav{
-    background: #2A3132;
-}
+
 .menuBtn{
     color: white;
     height: 10vh;
@@ -57,4 +59,21 @@
     opacity: 1;
     height: 2px;
     width: 100%;
+}
+@media (min-width: 1024px) {
+    .HolyGrail-nav{
+        position: absolute;
+        z-index: 1;
+        top: 40vh;
+        left: 2vh;
+        background: #2A3132;
+    }
+    .HolyGrail-nav li {
+        margin-bottom: 10px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        font-size: 1.1em;
+        width: unset;
+    }
 }
