@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,16 +6,19 @@
     font-family: 'Lato', sans-serif;
 
 }
-body{
+
+body {
     position: relative;
 
 }
-#logo{
+
+#logo {
     width: 9vh;
     height: 9vh;
     margin-left: 7vh;
 }
-#header>.mainContainer{
+
+#header > .mainContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -25,16 +28,19 @@ body{
     text-shadow: 2px 2px 2px #763626;
 
 }
-#header>.mainContainer>h1{
+
+#header > .mainContainer > h1 {
     font-family: 'Shrikhand', cursive;
     margin-left: 0.5vh;
     font-size: 2.2em;
 }
-#header>.mainContainer>img{
+
+#header > .mainContainer > img {
     width: 9vh;
     margin-left: 10vh;
 }
-.logo{
+
+.logo {
     width: 9vh;
 
 }
@@ -47,8 +53,7 @@ body{
 }
 
 
-
-.HolyGrail-body{
+.HolyGrail-body {
     width: 100%;
     justify-content: space-between;
 }
@@ -60,7 +65,7 @@ body{
 
 
 #header,
-#footer{
+#footer {
     box-shadow: 0 0 2px whitesmoke;
     background: #90afc5;
     width: 100%;
@@ -69,10 +74,12 @@ body{
     align-items: center;
     z-index: 100;
 }
-#header{
+
+#header {
     height: 10vh;
 }
-#main{
+
+#main {
     display: flex;
     justify-content: flex-start;
     background: #336b87;
@@ -81,20 +88,22 @@ body{
 
 }
 
-.HolyGrail-content{
+.HolyGrail-content {
     display: flex;
     flex-flow: column nowrap;
     background: #2A3132;
 }
-.mainContent{
+
+.mainContent {
     padding: 20px;
     color: white;
     box-shadow: 0 0 10px #336b87;
     height: 100%;
 
 }
-.mainContent>li{
-    box-shadow: 0 0 2px whitesmoke;
+
+.mainContent > li {
+    box-shadow: 0px 0px 5px 5px rgba(144, 175, 197,0.75);
     background: #336b87;
     margin-bottom: 20px;
     padding: 10px;
@@ -102,27 +111,31 @@ body{
 
 
 
+
 @media (min-width: 1024px) {
-    #header{
+    #header {
         height: 40vh;
     }
+
     .sticky {
         position: fixed;
 
     }
 
-    #main{
+    #main {
         justify-content: center;
 
 
     }
-    #header>.mainContainer{
+
+    #header > .mainContainer {
 
         font-size: 1.6em;
 
 
     }
-    .mainContainer{
+
+    .mainContainer {
         width: calc(100vw - 12em);
 
     }
@@ -133,7 +146,8 @@ body{
 
 
     }
-    .HolyGrail-body>.mainContainer{
+
+    .HolyGrail-body > .mainContainer {
         display: flex;
 
     }
@@ -145,53 +159,69 @@ body{
         height: auto;
         min-height: 86vh;
     }
+
     .HolyGrail-nav, .HolyGrail-ads {
         /* 12em is the width of the columns */
         flex: 0 0 12em;
     }
-    .HolyGrail-nav{
+
+    .HolyGrail-nav {
         position: absolute;
         z-index: 1;
         top: 40vh;
         left: 2vh;
+        box-shadow: 0px 0px 5px 5px rgba(144, 175, 197,0.75);
+
 
     }
-    .newGroupForm li label{
+
+    .newGroupForm li label {
         display: inline-block;
         width: 42.7em;
     }
 }
 
-.cc-selector input:active +.avatarRadio{opacity: .9;}
-.cc-selector input:checked +.avatarRadio{
+.cc-selector input:active + .avatarRadio {
+    opacity: .9;
+}
+
+.cc-selector input:checked + .avatarRadio {
     -webkit-filter: none;
     -moz-filter: none;
     filter: none;
 }
-.athlete{
+
+.athlete {
     background-image: url("./../images/avatars/athlete.png");
 }
-.acrobat{
+
+.acrobat {
     background-image: url("./../images/avatars/acrobat.png");
 }
-.cyclist{
+
+.cyclist {
     background-image: url("./../images/avatars/cyclist.png");
 }
-.fitness{
+
+.fitness {
     background-image: url("./../images/avatars/fitness.png");
 }
-.basketball{
+
+.basketball {
     background-image: url("./../images/avatars/basketball.png");
 }
-.boxer{
+
+.boxer {
     background-image: url("./../images/avatars/boxer.png");
 }
-.avatarRadio{
-    cursor:pointer;
-    background-size:contain;
-    background-repeat:no-repeat;
-    display:inline-block;
-    width:100px;height:70px;
+
+.avatarRadio {
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 100px;
+    height: 70px;
     -webkit-transition: all 100ms ease-in;
     -moz-transition: all 100ms ease-in;
     transition: all 100ms ease-in;
@@ -199,23 +229,28 @@ body{
     -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
     filter: brightness(1.8) grayscale(1) opacity(.7);
 }
-.avatarRadio:active{
+
+.avatarRadio:active {
     -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
     filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
-.cc-selector input{
-    margin:0;padding:0;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+
+.cc-selector input {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
-.subNav{
+
+.subNav {
     margin: -10px;
     display: flex;
     flex-flow: row wrap;
 }
-.subNavBtn{
+
+.subNavBtn {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -251,16 +286,44 @@ body{
     opacity: 1;
     transition: 0s
 }
-.chat{
-    background-color: #90afc5;
+
+.chat {
+    background-color: rgb(144, 175, 197);
     background-image: url("./../images/support.png");
 }
-.joinEvent{
+
+.joinEvent {
     background-color: springgreen;
     background-image: url("./../images/user.png");
 }
-.membersList{
+
+.membersList {
     background-color: #336b87;
     background-image: url("./../images/group.png");
 }
 
+.userDetails {
+    display: none;
+    position: absolute;
+    top: 3.7em;
+    left: -0.1em;
+    z-index: 10;
+    background-color: black;
+    border: 5px solid green;
+    width: 12em;
+    height: 15em;
+    border-radius: 0 20% 0 0;
+
+}
+
+.userAv {
+    display: inline-block;
+    position: relative;
+}
+
+.userAv:hover > .userDetails {
+    display: inline-block;
+}
+.userAv:hover > img{
+    box-shadow: 0px 0px 0px 5px rgba(0,128,0,1);
+}

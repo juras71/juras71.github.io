@@ -5,8 +5,8 @@ import fire from "./../config/firebase.js"
 export default class Event extends React.Component {
     constructor(props) {
         super(props)
-        this.state ={
-            eventUsers : [],
+        this.state = {
+            eventUsers: [],
         }
     }
 
@@ -56,17 +56,18 @@ export default class Event extends React.Component {
         let loadMembers = fire.database().ref('users');
         loadMembers.on("value", (data) => {
             let eventUsers = []
-            {Object.keys(data.val()).map((item,key, index) => {
-                if (members.indexOf(data.val()[item].id.toString())!==-1) {
+            {
+                Object.keys(data.val()).map((item, key, index) => {
+                    if (members.indexOf(data.val()[item].id.toString()) !== -1) {
 
 
-                    eventUsers.push(data.val()[item]);
+                        eventUsers.push(data.val()[item]);
 
-                }
+                    }
 
-            })
+                })
                 this.setState({
-                    eventUsers : eventUsers,
+                    eventUsers: eventUsers,
                 })
             }
         }, function (error) {
@@ -90,8 +91,8 @@ export default class Event extends React.Component {
                 <ul className="mainContent">
                     <li>
                         <div className="subNav">
-                           <button className="subNavBtn chat"></button>
-                            <button  className="subNavBtn membersList" onClick={this.loadMembers}></button>
+                            <button className="subNavBtn chat"></button>
+                            <button className="subNavBtn membersList" onClick={this.loadMembers}></button>
                             <button className="subNavBtn joinEvent" onClick={this.joinEvent}>DOŁĄCZ!</button>
                         </div>
                     </li>
@@ -115,13 +116,18 @@ export default class Event extends React.Component {
                     </li>
 
                     <li className="slots hidden">
-                        {[...Array(this.state.eventUsers.length)].map((e, i) => <p><img alt={this.state.eventUsers[i].username}
-                                                                                               className="eventMember"
-                                                                                               key={i}
-                                                                                               src={`./images/avatars/${this.state.eventUsers[i].avatar}`}/>
-                        <strong>{this.state.eventUsers[i].username}</strong>
-                            <span>Jego ulubiony sport to : {this.state.eventUsers[i].sports[0]}</span>
-                        </p>)}
+                        {[...Array(this.state.eventUsers.length)].map((e, i) => <div className="userAv"><img
+                            alt={this.state.eventUsers[i].username}
+                            className="eventMember"
+                            key={i}
+                            src={`./images/avatars/${this.state.eventUsers[i].avatar}`}/>
+                            <div className="userDetails">
+                                <strong>{this.state.eventUsers[i].username}</strong>
+                                <span>Jego ulubiony sport to : {this.state.eventUsers[i].sports[0]}</span>
+
+                            </div>
+
+                        </div>)}
                         {[...Array(parseInt(eventInfo.members[0]) - eventInfo.members.length + 1)].map((e, i) => <img
                             alt={eventInfo.sport} className="eventSlot" src={`./images/sports/${eventInfo.sport}.png`}
                             key={i}/>)}
