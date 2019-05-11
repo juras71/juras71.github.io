@@ -52,6 +52,7 @@ export default class NewEvent extends React.Component {
             time: [this.state.date,this.state.time],
             members: [this.state.members,this.props.userInfo.id],
             admin: this.props.userInfo.id,
+            comments: [[],],
         };
 
 
