@@ -82,7 +82,6 @@ export default class Event extends React.Component {
     showComments() {
         let evComments = document.querySelector(".eventComments");
         evComments.classList.remove('hidden')
-        let comments = this.props.eventInfo[localStorage.getItem('eventID').toString()].comments;
 
     }
 
@@ -90,7 +89,7 @@ export default class Event extends React.Component {
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
         console.log(eventInfo.members);
-        let userInfo = this.props.userInfo;
+
 
 
         return (

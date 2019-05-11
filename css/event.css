@@ -19,7 +19,7 @@
 .eventSlot, .eventMember {
     width: 2.8em;
     height: 3.425em;
-    margin: 0.4em;
+    margin: 0.22em;
     border-radius: 0 50% 0 0;
     background: white;
     border-bottom: 10px solid firebrick;
@@ -156,6 +156,7 @@
 .newComment{
     display: flex;
     flex-flow: row wrap;
+
 }
 
 .userAv:hover > .userDetails {

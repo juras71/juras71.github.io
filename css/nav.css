@@ -30,13 +30,32 @@
     position: relative;
     top: 0;
     left: 0;
+    background: url("./../images/menuburger.png");
+    background-size: cover;
+    transition: background;
+    transition-duration: 500ms;
+
 }
+
+
+.exitMenu{
+    background: url("./../images/exit.png");
+    background-size: cover;
+}
+
 .menuBar {
     height: 10vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 110;
+
+}
+.menuBurger{
+    position: absolute;
+    top: 0;
+    left: 0;
+
 }
 .HolyGrail-nav li:before, .HolyGrail-nav li:after
 {
@@ -67,6 +86,7 @@
     height: 2px;
     width: 100%;
 }
+
 @media (min-width: 1024px) {
     .HolyGrail-nav li {
         margin-bottom: 10px;

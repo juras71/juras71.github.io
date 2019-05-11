@@ -13,6 +13,8 @@ export default class Nav extends React.Component {
 
     }
     handleMenuBarVisibility =()=>{
+        let btn = document.querySelector('.menuBtn')
+        btn.classList.toggle('exitMenu');
         return this.setState({
             toggleVis: this.state.toggleVis==="hidden"?'':'hidden'
         })
@@ -46,7 +48,7 @@ export default class Nav extends React.Component {
         else {
             return(
                 <div  className="menuBar">
-                    <button onClick={this.handleMenuBarVisibility} className="menuBtn">&#9776;</button>
+                    <button onClick={this.handleMenuBarVisibility} className="menuBtn burgerMenu"></button>
                     <div className={this.state.toggleVis}>
                 <ul className="HolyGrail-nav">
                     <li onClick={() => this.handleNavClick('profile')}>PROFIL</li>

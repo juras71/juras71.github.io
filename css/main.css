@@ -1,5 +1,7 @@
 .hidden {
     display: none;
+    transition: display;
+    transition-duration: 500ms;
 }
 
 #main {
