@@ -1,0 +1,187 @@
+.eventHeader:hover {
+    font-size: 2em;
+    color: firebrick;
+    cursor: pointer;
+}
+
+.sportLogo {
+    width: 4em;
+    float: left;
+    margin-right: 0.8vh;
+    border-radius: 30%;
+    background: white;
+    border: 2px solid black;
+    box-shadow: 3px 3px darkslategrey;
+
+}
+
+
+.eventSlot, .eventMember {
+    width: 2.8em;
+    height: 3.425em;
+    margin: 0.4em;
+    border-radius: 0 50% 0 0;
+    background: white;
+    border-bottom: 10px solid firebrick;
+    box-shadow: 3px 3px darkslategrey;
+}
+
+.slots {
+    margin-top: 1em;
+    position: relative;
+}
+
+.slots:after {
+    content: none;
+    width: 2.8em;
+    height: 2.8em;
+    background: black;
+    opacity: 0.6;
+    border-radius: 0 50% 0 0;
+    position: absolute;
+    right: 0.45em;
+    bottom: 1em;
+}
+
+.counter {
+    position: absolute;
+    right: 1.15em;
+    bottom: 1.4em;
+    z-index: 100;
+}
+
+.eventSlot:hover {
+    background: darkseagreen;
+}
+
+.eventComments {
+    display: flex;
+    flex-flow: column wrap;
+    width: unset;
+
+}
+
+.subNav {
+    margin: -10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.subNavBtn {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 33.33%;
+    height: 4em;
+    border: 1px solid lightblue;
+    color: #FFFFFF;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.subNavBtn:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.subNavBtn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.chat {
+    background-color: rgb(144, 175, 197);
+    background-image: url("./../images/support.png");
+}
+
+.joinEvent {
+    background-color: springgreen;
+    background-image: url("./../images/user.png");
+}
+
+.membersList {
+    background-color: #336b87;
+    background-image: url("./../images/group.png");
+}
+
+.userDetails {
+    display: none;
+    position: absolute;
+    top: 3.7em;
+    left: -0.1em;
+    z-index: 10;
+    background-color: black;
+    border: 5px solid green;
+    width: 12em;
+    height: 15em;
+    border-radius: 0 20% 0 0;
+
+}
+
+.userAv {
+    display: inline-block;
+    position: relative;
+}
+.eventName{
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 2px 2px black;
+    letter-spacing: 0.07em;
+    font-size: 1.2em;
+}
+
+.commentBox {
+    min-height: 7em;
+    background: black;
+    border: 2px dashed red;
+    margin-bottom: 1em;
+}
+.comment{
+    display: flex;
+}
+
+.userAv:hover > .userDetails {
+    display: inline-block;
+}
+
+.userAv:hover > img {
+    box-shadow: 0px 0px 0px 5px rgba(0, 128, 0, 1);
+}
+
+@media (min-width: 1024px) {
+    .numInfo {
+        float: right;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+
+
+    }
+
+    .evContainer {
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+
+    }
+
+    .slots:after {
+        right: 0.22em;
+        bottom: 0.85em;
+    }
+
+}

@@ -31,6 +31,13 @@
     top: 0;
     left: 0;
 }
+.menuBar {
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+}
 .HolyGrail-nav li:before, .HolyGrail-nav li:after
 {
     position: absolute;
@@ -61,19 +68,21 @@
     width: 100%;
 }
 @media (min-width: 1024px) {
-    .HolyGrail-nav{
-        position: absolute;
-        z-index: 1;
-        top: 40vh;
-        left: 2vh;
-        background: #2A3132;
-    }
     .HolyGrail-nav li {
         margin-bottom: 10px;
         padding: 20px;
-        text-align: center;
+           text-align: center;
         position: relative;
         font-size: 1.1em;
         width: unset;
+    }
+    .HolyGrail-nav {
+        background: #2A3132;
+        position: absolute;
+        z-index: 1;
+        left: 2vh;
+        box-shadow: 0px 0px 5px 5px rgba(144, 175, 197,0.75);
+
+
     }
 }

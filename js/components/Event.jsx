@@ -1,5 +1,6 @@
 import React from "react";
 import fire from "./../config/firebase.js"
+import "./../../css/event.css"
 
 
 export default class Event extends React.Component {
@@ -78,6 +79,13 @@ export default class Event extends React.Component {
         slots.classList.remove("hidden");
     };
 
+    showComments() {
+        let evComments = document.querySelector(".eventComments");
+        evComments.classList.remove('hidden')
+        let comments = this.props.eventInfo[localStorage.getItem('eventID').toString()].comments;
+
+    }
+
 
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
@@ -91,14 +99,14 @@ export default class Event extends React.Component {
                 <ul className="mainContent">
                     <li>
                         <div className="subNav">
-                            <button className="subNavBtn chat"></button>
+                            <button className="subNavBtn chat" onClick={this.showComments}></button>
                             <button className="subNavBtn membersList" onClick={this.loadMembers}></button>
                             <button className="subNavBtn joinEvent" onClick={this.joinEvent}>DOŁĄCZ!</button>
                         </div>
                     </li>
 
                     <li className="evContainer">
-                        <h2> {eventInfo.eventName}<img className="sportLogo" alt={eventInfo.sport}
+                        <h2 className="eventName"> {eventInfo.eventName}<img className="sportLogo" alt={eventInfo.sport}
                                                        src={`./images/sports/${eventInfo.sport}.png`}/></h2>
                         <h3>Miasto : {eventInfo.city}</h3>
                         <h3>Data : {eventInfo.time[0]}</h3>
@@ -131,6 +139,21 @@ export default class Event extends React.Component {
                         {[...Array(parseInt(eventInfo.members[0]) - eventInfo.members.length + 1)].map((e, i) => <img
                             alt={eventInfo.sport} className="eventSlot" src={`./images/sports/${eventInfo.sport}.png`}
                             key={i}/>)}
+                    </li>
+                    <li className="eventComments hidden">
+                        {eventInfo.comments.map((key, i) => {
+                            return (
+                                <div className="commentBox">
+                                <div className="comment"><img className="eventSlot commentAvatar" alt="avatar" src={`./images/avatars/${eventInfo.comments[i][0]}`} key={i}/>
+                                <p>{eventInfo.comments[i][1]}</p>
+                                </div>
+                                    <form>
+                                       <label><input type="text" key={i} placeholder="Tu wpisz swój komentarz"/>Skomentuj</label>
+                                        <button key={i} type="submit">Dodaj komentarz</button>
+                                   </form>
+                                   </div>
+                            )
+                        })}
                     </li>
                 </ul>
             </div>

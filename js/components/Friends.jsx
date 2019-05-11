@@ -1,4 +1,5 @@
 import React from "react";
+import "./../../css/friends.css"
 
 export default class MainBody extends React.Component {
     constructor(props) {

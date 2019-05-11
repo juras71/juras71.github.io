@@ -6,12 +6,11 @@ import Groups from "./Groups.jsx"
 import Chats from "./Chats.jsx"
 import Nav from "./Nav.jsx"
 import Aside from "./Aside.jsx"
-import "./../../css/main.css"
 import NewEvent from "./NewEvent.jsx";
 import fire from "../config/firebase";
 import NewGroup from "./NewGroup.jsx";
 import Event from "./Event.jsx";
-
+import "./../../css/main.css"
 
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./../../css/chats.css"
 export default class Chats extends React.Component {
     constructor(props) {
         super(props)

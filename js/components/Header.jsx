@@ -1,5 +1,5 @@
 import React from "react";
-import "./../../images/logo.png"
+import "./../../css/header.css"
 
 export default class Header extends React.Component{
     constructor(props){
@@ -11,7 +11,6 @@ export default class Header extends React.Component{
             return (
                 <header id="header">
                     <div className="mainContainer">
-                        <img src='./images/logo.png' alt="logo" className="logo" />
                         <h1>
                             TEAMMATES
                         </h1>

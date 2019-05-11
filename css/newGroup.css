@@ -9,7 +9,7 @@
 }
 .newGroupForm li label{
     display: inline-block;
-    width: 16em;
+    width: 100%;
 }
 
 li{
@@ -37,3 +37,4 @@ li{
     align-items: center;
     float: right;
 }
+

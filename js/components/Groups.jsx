@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./../../css/groups.css"
 export default class Groups extends React.Component {
     constructor(props) {
         super(props)
