@@ -2,6 +2,7 @@ import React from "react";
 import fire from "./../config/firebase.js"
 let width = window.innerWidth;
 import "./../../css/nav.css"
+import "./../../images/nav/profile.png"
 
 export default class Nav extends React.Component {
     constructor(props) {
@@ -33,15 +34,16 @@ export default class Nav extends React.Component {
     render() {
         if (width>=1024) {
             return (
-                <ul className="HolyGrail-nav">
-                    <li onClick={() => this.handleNavClick('profile')}>PROFIL</li>
-                    <li onClick={() => this.handleNavClick('groups')}>GRUPY</li>
-                    <li id="eventLi" onClick={() => this.handleNavClick('events')}>WYDARZENIA</li>
-                    <li onClick={() => this.handleNavClick('addEvent')}>DODAJ WYDARZENIE</li>
-                    <li onClick={() => this.handleNavClick('addGroup')}>DODAJ GRUPĘ</li>
-                    <li onClick={() => this.handleNavClick('friends')}>ZNAJOMI</li>
-                    <li className="logoutBtn"  onClick={this.logout}>WYLOGUJ</li>
-                </ul>
+                    <ul className="HolyGrail-nav">
+                        <li onClick={() => this.handleNavClick('profile')}><img alt='' src={require('./../../images/nav/profile.png')}/>PROFIL</li>
+                        <li onClick={() => this.handleNavClick('groups')} ><img alt='' src={require('./../../images/nav/groups.png')}/>GRUPY</li>
+                        <li id="eventLi" onClick={() => this.handleNavClick('events')}><img alt='' src={require('./../../images/nav/events.png')}/>WYDARZENIA</li>
+                        <li onClick={() => this.handleNavClick('addEvent')}><img alt='' src={require('./../../images/nav/addEvent.png')}/>DODAJ WYDARZENIE</li>
+                        <li onClick={() => this.handleNavClick('addGroup')}><img alt='' src={require('./../../images/nav/addGroup.png')}/>DODAJ GRUPĘ</li>
+                        <li onClick={() => this.handleNavClick('friends')}><img alt='' src={require('./../../images/nav/friends.png')}/>ZNAJOMI</li>
+                        <li className="logoutBtn"  onClick={this.logout}><img alt='' src={require('./../../images/nav/logout.png')}/>WYLOGUJ</li>
+                    </ul>
+
 
             );
         }
@@ -51,13 +53,13 @@ export default class Nav extends React.Component {
                     <button onClick={this.handleMenuBarVisibility} className="menuBtn burgerMenu"></button>
                     <div className={this.state.toggleVis}>
                 <ul className="HolyGrail-nav">
-                    <li onClick={() => this.handleNavClick('profile')}>PROFIL</li>
-                    <li onClick={() => this.handleNavClick('groups')}>GRUPY</li>
-                    <li id="eventLi" onClick={() => this.handleNavClick('events')}>WYDARZENIA</li>
-                    <li onClick={() => this.handleNavClick('addEvent')}>DODAJ WYDARZENIE</li>
-                    <li onClick={() => this.handleNavClick('addGroup')}>DODAJ GRUPĘ</li>
-                    <li onClick={() => this.handleNavClick('friends')}>ZNAJOMI</li>
-                    <li className="logoutBtn"  onClick={this.logout}>WYLOGUJ</li>
+                    <li onClick={() => this.handleNavClick('profile')}><img alt='' src={require('./../../images/nav/profile.png')}/>PROFIL</li>
+                    <li onClick={() => this.handleNavClick('groups')} ><img alt='' src={require('./../../images/nav/groups.png')}/>GRUPY</li>
+                    <li id="eventLi" onClick={() => this.handleNavClick('events')}><img alt='' src={require('./../../images/nav/events.png')}/>WYDARZENIA</li>
+                    <li onClick={() => this.handleNavClick('addEvent')}><img alt='' src={require('./../../images/nav/addEvent.png')}/>DODAJ WYDARZENIE</li>
+                    <li onClick={() => this.handleNavClick('addGroup')}><img alt='' src={require('./../../images/nav/addGroup.png')}/>DODAJ GRUPĘ</li>
+                    <li onClick={() => this.handleNavClick('friends')}><img alt='' src={require('./../../images/nav/friends.png')}/>ZNAJOMI</li>
+                    <li className="logoutBtn"  onClick={this.logout}><img alt='' src={require('./../../images/nav/logout.png')}/>WYLOGUJ</li>
                 </ul>
                     </div>
                 </div>
