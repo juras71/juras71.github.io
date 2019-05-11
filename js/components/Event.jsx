@@ -100,7 +100,7 @@ export default class Event extends React.Component {
                         <div className="subNav">
                             <button className="subNavBtn chat" onClick={this.showComments}></button>
                             <button className="subNavBtn membersList" onClick={this.loadMembers}></button>
-                            <button className="subNavBtn joinEvent" onClick={this.joinEvent}>DOŁĄCZ!</button>
+                            <button className="subNavBtn joinEvent" onClick={this.joinEvent}></button>
                         </div>
                     </li>
 
