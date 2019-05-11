@@ -18,7 +18,7 @@ li{
 }
 body {
     position: relative;
-
+    width: 100vw;
 }
 form{
     width: 100%;
