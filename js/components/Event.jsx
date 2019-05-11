@@ -147,8 +147,8 @@ export default class Event extends React.Component {
                                 <div className="comment"><img className="eventSlot commentAvatar" alt="avatar" src={`./images/avatars/${eventInfo.comments[i][0]}`} key={i}/>
                                 <p>{eventInfo.comments[i][1]}</p>
                                 </div>
-                                    <form>
-                                       <label><input type="text" key={i} placeholder="Tu wpisz swój komentarz"/>Skomentuj</label>
+                                    <form className="newComment">
+                                       <label><input type="text" key={i} placeholder="Tu wpisz swój komentarz"/></label>
                                         <button key={i} type="submit">Dodaj komentarz</button>
                                    </form>
                                    </div>

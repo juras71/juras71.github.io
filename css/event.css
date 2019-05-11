@@ -153,6 +153,10 @@
 .comment{
     display: flex;
 }
+.newComment{
+    display: flex;
+    flex-flow: row wrap;
+}
 
 .userAv:hover > .userDetails {
     display: inline-block;

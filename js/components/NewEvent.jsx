@@ -12,6 +12,7 @@ export default class NewEvent extends React.Component {
             date: '',
             time:'',
             members: [],
+            comments : [],
 
 
         }
@@ -44,7 +45,7 @@ export default class NewEvent extends React.Component {
         setTimeout(()=> { submitNewEventBtn.style.display='none'; }, 1500);
 
 
-
+        let intro = [this.props.userInfo.avatar,'Witajcie w wydarzeniu']
         const newEvent = {
             eventName : this.state.eventName,
             sport: this.state.sport,
@@ -52,7 +53,7 @@ export default class NewEvent extends React.Component {
             time: [this.state.date,this.state.time],
             members: [this.state.members,this.props.userInfo.id],
             admin: this.props.userInfo.id,
-            comments: [[],],
+            comments: [intro,],
         };
 
 
