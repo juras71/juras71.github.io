@@ -6,6 +6,7 @@
     font-family: 'Lato', sans-serif;
 
 }
+
 li{
     margin-bottom: 0.1em;
 }
@@ -21,6 +22,7 @@ form{
 .HolyGrail-body {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
 }
 
@@ -72,10 +74,12 @@ form{
 
     .HolyGrail-body > .mainContainer {
         display: flex;
+        width: 100%;
 
     }
 
     .HolyGrail-content {
+        width: 100%;
         flex: 1;
         margin: 1em;
         margin-left: 12em;
