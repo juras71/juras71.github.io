@@ -20,10 +20,6 @@ body {
     position: relative;
     width: 100vw;
 }
-form{
-    width: 100%;
-    margin-top: 0;
-}
 .HolyGrail,
 .HolyGrail-body {
     display: flex;

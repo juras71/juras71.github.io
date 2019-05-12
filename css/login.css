@@ -2,7 +2,6 @@
 
 }
 .loginFormContainer{
-    overflow-y: scroll;
     background: linear-gradient(to right, rgba(94,126,255,1) 0%, rgba(51,107,135,1) 100%);
     width: 100%;
     min-height: 100vh;
@@ -10,9 +9,11 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    color: white;
 }
-.loginFormContainer>form{
-    width: 85%;
+.loginForm, .signUpBtn, #signUpForm{
+    margin-top: 1em;
+    width: 90%;
 }
 .menuBtnInactive{
     height: 10vh;
@@ -23,15 +24,7 @@
     background-size: cover;
     position: absolute;
 }
-form{
-    width: 85%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    color: white;
 
-}
 
 
 .btn{
@@ -40,6 +33,7 @@ form{
     border: 0;
     height: 2em;
     color: white;
+    width: 100%;
 }
 .btn:hover{
     background-color: #90afc5;
@@ -54,26 +48,14 @@ form{
 .form-group{
     display: flex;
     flex-direction: column;
-}
-
-/* .logoContainer{
-    display: flex;
-    flex-flow: row wrap;
     align-items: center;
-    font-family: 'Kaushan Script', cursive;
-    font-size: 1em;
-    color: #763626;
-    text-shadow: 2px 2px 2px whitesmoke;
-    padding:10px;
-
 }
-*/
+
+
 .hidden{
     display: none;
 }
-.signUpBtn{
-    width: 85%;
-}
+
 
 .cc-selector input:active + .avatarRadio {
     opacity: .9;
@@ -135,21 +117,28 @@ form{
 }
 
 @media (min-width: 1024px) {
-.loginFormContainer{
-    display: flex;
-    align-items: center;
-
-    flex-flow: column nowrap;
-}
-    form{
-        width: 70%;
+    .form-control {
+        margin-bottom: 10px;
+        width: 50%;
+        height: 5rem;
+        font-size: 3em;
     }
-    #loginLogo{
-        width: 140px;
-        height: 140px;
-
+    .btn{
+        font-size: 3em;
+        height: 6rem;
+        color: white;
+        width: 10em;
     }
-    .logoContainer{
-        font-size: 1.6em;
+    .menuBtnInactive{
+        display: none;
+    }
+
+    #header > .mainContainer > h1 {
+    margin: 0;
+    }
+    #signUpForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

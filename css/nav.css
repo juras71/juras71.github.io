@@ -4,6 +4,7 @@
 .HolyGrail-nav li {
     display: flex;
     color: black;
+    text-shadow: 2px 1px 1px white;
     align-items: center;
     background: linear-gradient(to right,rgba(144,175,197,1) 0%, rgba(144,175,197,1) 20%, rgba(74,89,186,1) 80%);
     font-weight: bold;

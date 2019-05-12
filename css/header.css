@@ -22,10 +22,10 @@
         height: 20vh;
     }
     #header > .mainContainer {
-
+        display: flex;
         font-size: 3em;
-
-
+        justify-content: center;
+        margin: 0;
     }
 
 }

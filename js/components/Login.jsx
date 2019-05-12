@@ -105,7 +105,7 @@ class Login extends Component {
                         onClick={(e)=>{e.preventDefault(); this.handleSignUpFormVisibility()}}>
                     Zarejestruj się!
                 </button>
-                <form className={this.state.toggleVis} onSubmit={(data)=>{this.signup(data);this.addNewUser(data)}}>
+                <form className={this.state.toggleVis} id="signUpForm" onSubmit={(data)=>{this.signup(data);this.addNewUser(data)}}>
                     <label>Nazwa użytkownika:</label>
                     <input value={this.state.username} onChange={this.handleChange} name="username" type="text" className="form-control"/>
                     <label>Email: </label>
@@ -117,7 +117,7 @@ class Login extends Component {
                     <label>Ulubiony sport:</label>
                         <select
                             name="sport"
-                            className="chooseSport"
+                            className="form-control"
                             value={this.state.sport}
                             onChange={this.handleChange}
                         >
