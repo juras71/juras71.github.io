@@ -29,7 +29,7 @@
 }
 
 .mainContent > li {
-    box-shadow: 0 0 5px 5px rgba(144, 175, 197,0.75);
+    box-shadow: 0 0 5px 1px rgba(144, 175, 197, 0.75);
     margin-bottom: 20px;
     padding: 10px;
 }

@@ -14,12 +14,12 @@ export default class Nav extends React.Component {
 
     }
     handleMenuBarVisibility =()=>{
-        let btn = document.querySelector('.menuBtn')
+        let btn = document.querySelector('.menuBtn');
         btn.classList.toggle('exitMenu');
         return this.setState({
             toggleVis: this.state.toggleVis==="hidden"?'':'hidden'
         })
-    }
+    };
 
     logout() {
         fire.auth().signOut();
@@ -27,9 +27,11 @@ export default class Nav extends React.Component {
     }
     handleNavClick(sth){
         this.props.handleNavigation(sth);
+        if (width<1024){
         setTimeout(()=>{
             this.handleMenuBarVisibility()
         },300);
+        }
     }
     render() {
         if (width>=1024) {
