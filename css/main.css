@@ -16,7 +16,7 @@
 .HolyGrail-content {
     display: flex;
     flex-flow: column nowrap;
-    background: #2A3132;
+    background: linear-gradient(to right, rgba(50,70,71,1) 0%, rgba(42,49,50,1) 61%, rgba(42,49,50,1) 100%);
 }
 
 .mainContent {
@@ -29,8 +29,7 @@
 }
 
 .mainContent > li {
-    box-shadow: 0px 0px 5px 5px rgba(144, 175, 197,0.75);
-    background: #336b87;
+    box-shadow: 0 0 5px 5px rgba(144, 175, 197,0.75);
     margin-bottom: 20px;
     padding: 10px;
 }
