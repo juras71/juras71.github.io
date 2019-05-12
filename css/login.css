@@ -13,6 +13,9 @@
 }
 .loginForm, .signUpBtn, #signUpForm{
     margin-top: 1em;
+    width: 15rem;
+}
+.signUpBtn{
     width: 90%;
 }
 .menuBtnInactive{
@@ -33,7 +36,7 @@
     border: 0;
     height: 2em;
     color: white;
-    width: 100%;
+    width: 15rem;
 }
 .btn:hover{
     background-color: #90afc5;
@@ -41,7 +44,7 @@
 }
 .form-control{
     margin-bottom: 10px;
-    width: 100%;
+    width: 15rem;
     height: 3rem;
     font-size: 2em;
 }
@@ -55,7 +58,11 @@
 .hidden{
     display: none;
 }
-
+#signUpForm{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
 
 .cc-selector input:active + .avatarRadio {
     opacity: .9;
@@ -99,6 +106,7 @@
     display: inline-block;
     width: 25%;
     height: 4em;
+    width: 3em;
     transition: all 100ms ease-in;
     filter: brightness(1.8) grayscale(1) opacity(.7);}
 
@@ -113,13 +121,14 @@
     display: flex;
     flex-flow: row wrap;
     margin-top: 1em;
+    width: 15rem;
 
 }
 
 @media (min-width: 1024px) {
     .form-control {
         margin-bottom: 10px;
-        width: 50%;
+        width: 30rem;
         height: 5rem;
         font-size: 3em;
     }
@@ -127,7 +136,7 @@
         font-size: 3em;
         height: 6rem;
         color: white;
-        width: 10em;
+        width: 30rem;
     }
     .menuBtnInactive{
         display: none;
@@ -136,9 +145,10 @@
     #header > .mainContainer > h1 {
     margin: 0;
     }
-    #signUpForm{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .cc-selector{
+        width: 30rem;
+    }
+    .avatarRadio{
+        width: 5em;
     }
 }

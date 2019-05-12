@@ -17,9 +17,7 @@ class Login extends Component {
             email: '',
             password: '',
             username : '',
-            toggleVis : 'hidden',
             age:'',
-            avatar : 'avat1.png',
             sport : 'football',
             avatars: 'athlete.png',
 
@@ -49,11 +47,11 @@ class Login extends Component {
                 console.log(error);
             })
     }
-    handleSignUpFormVisibility =()=>{
-        return this.setState({
-            toggleVis: this.state.toggleVis==="hidden"?'':'hidden'
-        })
-    };
+
+    toggleRegistrationVis=()=>{
+        document.querySelector('#signUpForm').style.display="flex";
+
+    }
 
     addNewUser = (event)=>{
         event.preventDefault();
@@ -102,10 +100,12 @@ class Login extends Component {
                 </form>
                 <p>Nie masz jeszcze konta?</p>
                 <button className="signUpBtn btn"
-                        onClick={(e)=>{e.preventDefault(); this.handleSignUpFormVisibility()}}>
-                    Zarejestruj się!
+                        onClick={(e)=>{e.preventDefault(); this.toggleRegistrationVis()}}
+
+                >
+                    Rejestracja
                 </button>
-                <form className={this.state.toggleVis} id="signUpForm" onSubmit={(data)=>{this.signup(data);this.addNewUser(data)}}>
+                <form id="signUpForm" onSubmit={(data)=>{this.signup(data);this.addNewUser(data)}}>
                     <label>Nazwa użytkownika:</label>
                     <input value={this.state.username} onChange={this.handleChange} name="username" type="text" className="form-control"/>
                     <label>Email: </label>

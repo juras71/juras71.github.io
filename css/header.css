@@ -7,7 +7,7 @@
 
 #header > .mainContainer > h1 {
     font-family: 'Shrikhand', cursive;
-    margin-left: 11vh;
+    margin-left: 10vh;
     margin-top: 1vh;
     font-size: 2.7em;
 
@@ -26,6 +26,9 @@
         font-size: 3em;
         justify-content: center;
         margin: 0;
+    }
+    #header > .mainContainer > h1 {
+        font-size: 1.7em;
     }
 
 }
