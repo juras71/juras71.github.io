@@ -23,8 +23,23 @@ export default class Main extends React.Component{
             userInfo : this.readUsers(),
             groupInfo:this.readGroups(),
             eventInfo: this.readEvents(),
+            width: 0,
+            height: 0,
 
-        }
+        };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+x
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
     componentWillMount() {
         console.log(fire.auth().currentUser.uid)

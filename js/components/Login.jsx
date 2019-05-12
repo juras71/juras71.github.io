@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import fire from './../config/firebase.js';
 import "./../../css/login.css"
 import "./../../images/logo.png"
+import Header from "./Header.jsx";
 
 
 class Login extends Component {
@@ -78,11 +79,7 @@ class Login extends Component {
     render() {
         return (
             <div className="loginFormContainer">
-                <div className="logoContainer"><img src='./images/logo.png' alt="logo" className="logo" />
-                    <h1>
-                        TEAMMATES
-                    </h1>
-                </div>
+                <Header/>
 
                 <form className="loginForm">
 
@@ -95,8 +92,9 @@ class Login extends Component {
                     <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Hasło:</label>
                         <input value={this.state.password} onChange={this.handleChange} type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Podaj hasło" />
+                        <button type="submit" onClick={this.login} className="btn btn-primary">Zaloguj się</button>
                     </div>
-                    <button type="submit" onClick={this.login} className="btn btn-primary">Zaloguj się</button>
+
 
                 </form>
                 <p>Nie masz jeszcze konta?</p>
@@ -106,7 +104,7 @@ class Login extends Component {
                 </button>
                 <form className={this.state.toggleVis} onSubmit={(data)=>{this.signup(data);this.addNewUser(data)}}>
                     <label>Nazwa użytkownika:</label>
-                    <input value={this.state.username} onChange={this.handleChange} name="username" type="text"/>
+                    <input value={this.state.username} onChange={this.handleChange} name="username" type="text" className="form-control"/>
                     <label>Email: </label>
                     <input value={this.state.email} onChange={this.handleChange} type="email" name="email" className="form-control"  aria-describedby="emailHelp" placeholder="Twój adres email" />
                     <label>Hasło:</label>
@@ -131,14 +129,6 @@ class Login extends Component {
                             <option value="hockey">Hokej</option>
                             <option value="running">Bieganie</option>
                         </select>
-                    <label>Avatar:</label>
-                    <select
-                        name="avatar"
-                        value={this.state.avatar}
-                        onChange={this.handleChange}>
-                    <option value="avat1.png">1</option>
-                    <option value="avat2.png">2</option>
-                    </select>
 
                     <div className="cc-selector">
                         <input id="acrobat" type="radio"  value="acrobat.png" name="avatars"  onChange={this.handleChange}/>
