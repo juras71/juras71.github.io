@@ -3,6 +3,7 @@ import fire from './../config/firebase.js';
 import "./../../css/login.css"
 import "./../../images/logo.png"
 import Header from "./Header.jsx";
+import Nav from  "./Nav.jsx";
 
 
 class Login extends Component {
@@ -79,8 +80,10 @@ class Login extends Component {
     render() {
         return (
             <div className="loginFormContainer">
+                <div className="loginHeader">
                 <Header/>
-
+                <div className="menuBtnInactive"/>
+                </div>
                 <form className="loginForm">
 
                     <div className="form-group">

@@ -1,18 +1,16 @@
 #header > .mainContainer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     font-size: 0.8em;
     color: floralwhite;
-    text-shadow: 2px 2px 2px #763626;
-
+    text-shadow: 2px 2px 2px darkslategrey;
+    width: 100vw;
 }
+
 #header > .mainContainer > h1 {
     font-family: 'Shrikhand', cursive;
-    margin-left: 9vh;
+    margin-left: 11vh;
     margin-top: 1vh;
     font-size: 2.7em;
+
 }
 
 

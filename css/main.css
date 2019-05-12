@@ -16,7 +16,7 @@
 .HolyGrail-content {
     display: flex;
     flex-flow: column nowrap;
-    background: linear-gradient(to right, rgba(50,70,71,1) 0%, rgba(42,49,50,1) 61%, rgba(42,49,50,1) 100%);
+    background: linear-gradient(to right, rgba(50, 70, 71, 1) 0%, rgba(42, 49, 50, 1) 61%, rgba(42, 49, 50, 1) 100%);
 }
 
 .mainContent {
@@ -25,7 +25,12 @@
     color: white;
     box-shadow: 0 0 10px #336b87;
     height: 100%;
-
+/*
+    background-image: url("./../images/bg.png");
+    background-position: bottom right;
+    background-size: 50%;
+    background-repeat: no-repeat;
+*/
 }
 
 .mainContent > li {
