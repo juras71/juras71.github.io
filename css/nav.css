@@ -1,15 +1,18 @@
+.HolyGrail-nav{
+    margin-top: -3px;
+}
 .HolyGrail-nav li {
-
     display: flex;
-    color: white;
+    color: black;
     align-items: center;
-    background: #2A3132;
+    background: linear-gradient(to right,rgba(144,175,197,1) 0%, rgba(144,175,197,1) 20%, rgba(74,89,186,1) 80%);
     font-weight: bold;
-    border: 2px solid white;
-    text-align: center;
+    border-top: 2px solid white;
     position: relative;
     font-size: 1.1em;
     margin: auto;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
 }
 .HolyGrail-nav>li:hover{
     color: white ;
@@ -32,7 +35,8 @@
     position: relative;
     top: 0;
     left: 0;
-    background: url("../images/nav/menuburger.png");
+    background-color: rgba(144,175,197,0.8);
+    background-image: url("../images/nav/menuburger.png");
     background-size: cover;
     transition: background;
     transition-duration: 500ms;
@@ -41,8 +45,8 @@
 
 
 .exitMenu{
-    background: url("../images/nav/exit.png");
-    background-size: cover;
+    background-image: url("../images/nav/exit.png");
+
 }
 
 .menuBar {
@@ -88,7 +92,9 @@
     height: 2px;
     width: 100%;
 }
-
+.logoutBtn{
+    border-bottom: 2px solid white;
+}
 @media (min-width: 1024px) {
     .HolyGrail-nav li {
         margin-bottom: 10px;

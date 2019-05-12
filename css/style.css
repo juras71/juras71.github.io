@@ -47,7 +47,7 @@ form{
 #header,
 #footer {
     box-shadow: 0 0 2px whitesmoke;
-    background: linear-gradient(to right, rgba(74,89,186,1) 0%, rgba(144,175,197,1) 61%, rgba(144,175,197,1) 100%);
+    background: linear-gradient(to right,rgba(144,175,197,1)  0%, rgba(144,175,197,1) 20%, rgba(74,89,186,1) 80%);
     width: 100%;
     display: flex;
     justify-content: center;
