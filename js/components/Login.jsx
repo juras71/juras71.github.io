@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import fire from './../config/firebase.js';
 import "./../../css/login.css"
-import "./../../images/logo.png"
 import Header from "./Header.jsx";
 import Nav from  "./Nav.jsx";
 
