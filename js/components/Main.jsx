@@ -102,9 +102,12 @@ x
 
         })
         localStorage.setItem('avatar',this.state.userInfo.avatar);
+        localStorage.setItem('author',this.state.userInfo.username);
+
     };
 
     render() {
+
         let test = ()=>{
             const tab =this.state.tab;
             if (tab==='groups'){

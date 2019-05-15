@@ -9,6 +9,7 @@ export default class Event extends React.Component {
         this.state = {
             eventUsers: [],
             newComment : [],
+            time : []
         }
 
     }
@@ -87,7 +88,8 @@ export default class Event extends React.Component {
 
     }
     comment=(e)=>{
-        let newComment = [localStorage.getItem('avatar'),e.target.value];
+        let date = new Date();
+        let newComment = [localStorage.getItem('avatar'),e.target.value,date.toLocaleTimeString(),date.toLocaleDateString(),localStorage.getItem('author')];
         this.setState({
             newComment: newComment
         })
@@ -99,7 +101,8 @@ export default class Event extends React.Component {
     }
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
-
+        let date = new Date()
+        console.log(date.toLocaleDateString(),date.toLocaleTimeString())
 
         return (
             <div className="HolyGrail-content">
@@ -129,6 +132,7 @@ export default class Event extends React.Component {
 
                         </div>
 
+
                     </li>
 
                     <li className="slots hidden">
@@ -147,22 +151,44 @@ export default class Event extends React.Component {
                         {[...Array(parseInt(eventInfo.members[0]) - eventInfo.members.length + 1)].map((e, i) => <img
                             alt={eventInfo.sport} className="eventSlot" src={`./images/sports/${eventInfo.sport}.png`}
                             key={i}/>)}
+                        <div className="exitBtn" >
+
+                        </div>
+                    </li>
+                    <li className="addComment">
+                        <h2 className="commentsHeader">Twój komentarz:</h2>
+                        <form onSubmit={(e)=>{e.preventDefault(); this.addComment()}}>
+                            <label><textarea placeholder="Tu wpisz swój komentarz" onChange={this.comment}/></label>
+                            <button type="submit">Dodaj komentarz</button>
+                        </form>
+                        <div className="exitBtn" >
+
+                        </div>
                     </li>
                     <li className="eventComments hidden">
-                        {Object.values(eventInfo.comments).map((item,key, i) => {
+                        <h2 className="commentsHeader">Dyskusja:</h2>
+                        {Object.values(eventInfo.comments).reverse().map((item,key, i) => {
                             return (
                                 <div className="commentBox">
-                                <div className="comment"><img className="eventSlot commentAvatar" alt="avatar" src={`./images/avatars/${item[0]}`} key={i}/>
-                                <p>{item[1]}</p>
+                                <div className="comment">
+                                    <div>
+                                        <img className="eventSlot commentAvatar" alt="avatar" src={`./images/avatars/${item[0]}`} key={i}/>
+
+                                        <span className="commentAuthor">{item[4]}</span>
+                                    <span className="commentTime">{item[2]},  {item[3]}</span>
+                                    </div>
+                                    <p className="commentText">{item[1]}</p>
                                 </div>
-                                        <form onSubmit={(e)=>{e.preventDefault(); this.addComment()}}>
-                                       <label><textarea key={i} placeholder="Tu wpisz swój komentarz" onChange={this.comment}/></label>
-                                        <button type="submit" key={i}  >Dodaj komentarz</button>
-                                        </form>
+
+
                                    </div>
                             )
                         })}
+                        <div className="exitBtn" >
+
+                        </div>
                     </li>
+
                 </ul>
             </div>
 
@@ -170,3 +196,7 @@ export default class Event extends React.Component {
     }
 
 }
+//<form onSubmit={(e)=>{e.preventDefault(); this.addComment()}}>
+//                                        <label><textarea key={i} placeholder="Tu wpisz swój komentarz" onChange={this.comment}/></label>
+//                                         <button type="submit" key={i}  >Dodaj komentarz</button>
+//                                         </form>
