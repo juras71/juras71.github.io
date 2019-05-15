@@ -96,11 +96,9 @@ export default class Event extends React.Component {
         let comments = fire.database().ref(`events/${localStorage.getItem('eventID')}/comments`)
         let comment = this.state.newComment;
         comments.push(comment)
-        console.log(comments, comment)
     }
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
-        console.log(Object.keys(eventInfo.comments));
 
 
         return (
