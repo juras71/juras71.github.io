@@ -101,6 +101,7 @@ x
             tab: 'event'
 
         })
+        localStorage.setItem('avatar',this.state.userInfo.avatar);
     };
 
     render() {

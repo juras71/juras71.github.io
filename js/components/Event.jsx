@@ -8,7 +8,9 @@ export default class Event extends React.Component {
         super(props)
         this.state = {
             eventUsers: [],
+            newComment : [],
         }
+
     }
 
     joinEvent = () => {
@@ -84,12 +86,21 @@ export default class Event extends React.Component {
         evComments.classList.remove('hidden')
 
     }
-
-
+    comment=(e)=>{
+        let newComment = [localStorage.getItem('avatar'),e.target.value];
+        this.setState({
+            newComment: newComment
+        })
+    }
+    addComment() {
+        let comments = fire.database().ref(`events/${localStorage.getItem('eventID')}/comments`)
+        let comment = this.state.newComment;
+        comments.push(comment)
+        console.log(comments, comment)
+    }
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
-        console.log(eventInfo.members);
-
+        console.log(Object.keys(eventInfo.comments));
 
 
         return (
@@ -140,16 +151,16 @@ export default class Event extends React.Component {
                             key={i}/>)}
                     </li>
                     <li className="eventComments hidden">
-                        {eventInfo.comments.map((key, i) => {
+                        {Object.values(eventInfo.comments).map((item,key, i) => {
                             return (
                                 <div className="commentBox">
-                                <div className="comment"><img className="eventSlot commentAvatar" alt="avatar" src={`./images/avatars/${eventInfo.comments[i][0]}`} key={i}/>
-                                <p>{eventInfo.comments[i][1]}</p>
+                                <div className="comment"><img className="eventSlot commentAvatar" alt="avatar" src={`./images/avatars/${item[0]}`} key={i}/>
+                                <p>{item[1]}</p>
                                 </div>
-                                    <form className="newComment">
-                                       <label><input type="text" key={i} placeholder="Tu wpisz swój komentarz"/></label>
-                                        <button key={i} type="submit">Dodaj komentarz</button>
-                                   </form>
+                                        <form onSubmit={(e)=>{e.preventDefault(); this.addComment()}}>
+                                       <label><textarea key={i} placeholder="Tu wpisz swój komentarz" onChange={this.comment}/></label>
+                                        <button type="submit" key={i}  >Dodaj komentarz</button>
+                                        </form>
                                    </div>
                             )
                         })}
