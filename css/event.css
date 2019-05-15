@@ -17,8 +17,7 @@
 
 
 .eventSlot, .eventMember {
-    width: 2.8em;
-    height: 3.425em;
+    width: 2.9em;
     margin: 0.22em;
     border-radius: 0 50% 0 0;
     background: white;
@@ -66,6 +65,7 @@
     display: flex;
     flex-flow: row wrap;
     border-radius: 5px;
+    justify-content: space-between;
 }
 
 .subNavBtn {
