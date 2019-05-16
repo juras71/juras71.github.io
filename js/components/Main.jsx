@@ -41,6 +41,13 @@ x
     updateWindowDimensions() {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
+    componentWillMount() {
+        console.log(fire.auth().currentUser.uid)
+    this.setState({
+        uid : fire.auth().currentUser.uid,
+
+    })
+    }
 
 
     readUsers = ()=>{

@@ -14,6 +14,7 @@ export default class Events extends React.Component {
 
     render() {
         let eventInfo = this.props.eventInfo;
+        console.log(eventInfo);
         return (
             <div className="HolyGrail-content">
                 <ul className="mainContent">

@@ -101,8 +101,7 @@ export default class Event extends React.Component {
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
         let date = new Date()
-
-        return (
+                return (
             <div className="HolyGrail-content">
 
                 <ul className="mainContent">
