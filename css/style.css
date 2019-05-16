@@ -51,7 +51,7 @@ body {
 #header,
 #footer {
     box-shadow: 0 0 2px whitesmoke;
-    background: linear-gradient(to right,rgba(144,175,197,1)  0%, rgba(144,175,197,1) 20%, rgba(74,89,186,1) 80%);
+    background: linear-gradient(to left,rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(144,175,197,1) 50%);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -105,7 +105,7 @@ body {
         flex: 0 0 12em;
         margin: 1.6em 0;
         border: .6rem solid rgba(255,255,255,0.5);
-        border-radius: 1em;
+        border-radius: 1.5rem;
         padding: .1em;
     }
 

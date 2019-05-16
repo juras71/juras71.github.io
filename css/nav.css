@@ -6,7 +6,7 @@
     color: black;
     text-shadow: 2px 1px 1px white;
     align-items: center;
-    background: linear-gradient(to right,rgba(255,255,255,1) 0%, rgba(255,255,255,1) 80%, rgba(144,175,197,1) 80%);
+    background: linear-gradient(to left,rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(144,175,197,1) 80%);
     font-weight: bold;
     border-top: 2px solid white;
     position: relative;
@@ -110,6 +110,6 @@
         position: absolute;
         z-index: 1;
         left: 1vh;
-
+        border-radius: 1.5rem;
     }
 }

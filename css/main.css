@@ -35,12 +35,11 @@
 
     margin-bottom: 1em;
     padding: .6em;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.2);
-    border: .3em solid rgba(255,255,255, 0.2);
-
-
+    border-radius: 1.3rem;
+    background: #2A3132;
+    border: .3em solid rgba(255,255,255, 0.5);
 }
+
 @media (min-width: 1024px) {
     .mainContent > li {
         font-size: 2em;
