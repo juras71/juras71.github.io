@@ -133,6 +133,7 @@ class Login extends Component {
                         </select>
 
                     <div className="cc-selector">
+                        <label>Wybierz swój avatar:</label>
                         <input id="acrobat" type="radio"  value="acrobat.png" name="avatars"  onChange={this.handleChange}/>
                         <label className="avatarRadio acrobat" htmlFor="acrobat"></label>
                         <input id="athlete" type="radio" value="athlete.png" name="avatars"  onChange={this.handleChange}/>
@@ -145,6 +146,44 @@ class Login extends Component {
                         <label className="avatarRadio fitness" htmlFor="fitness"></label>
                         <input id="basketball" type="radio" value="basketball.png" name="avatars"  onChange={this.handleChange}/>
                         <label className="avatarRadio basketball" htmlFor="basketball"></label>
+                        <input id="baseball-player" type="radio" value="baseball-player.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio baseball-player" htmlFor="baseball-player"></label>
+                        <input id="baseball-player-1" type="radio" value="baseball-player-1.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio baseball-player-1" htmlFor="baseball-player-1"></label>
+                        <input id="akebono-taro" type="radio" value="akebono-taro.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio akebono-taro" htmlFor="akebono-taro"></label>
+                        <input id="akebono-taro-1" type="radio" value="akebono-taro-1.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio akebono-taro-1" htmlFor="akebono-taro-1"></label>
+                        <input id="american-football" type="radio" value="american-football.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio american-football" htmlFor="american-football"></label>
+                        <input id="boxer-1" type="radio" value="boxer-1.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio boxer-1" htmlFor="boxer-1"></label>
+                        <input id="fitness-1" type="radio" value="fitness-1.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio fitness-1" htmlFor="fitness-1"></label>
+                        <input id="fitness-2" type="radio" value="fitness-2.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio fitness-2" htmlFor="fitness-2"></label>
+                        <input id="football" type="radio" value="football.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio football" htmlFor="football"></label>
+                        <input id="gymnast-1" type="radio" value="gymnast-1.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio gymnast-1" htmlFor="gymnast-1"></label>
+                        <input id="hockey-player" type="radio" value="hockey-player.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio hockey-player" htmlFor="hockey-player"></label>
+                        <input id="jockey" type="radio" value="jockey.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio jockey" htmlFor="jockey"></label>
+                        <input id="parachuter" type="radio" value="parachuter.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio parachuter" htmlFor="parachuter"></label>
+                        <input id="judo" type="radio" value="judo.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio judo" htmlFor="judo"></label>
+                        <input id="rollers" type="radio" value="rollers.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio rollers" htmlFor="rollers"></label>
+                        <input id="runner" type="radio" value="runner.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio runner" htmlFor="runner"></label>
+                        <input id="scuba-diver" type="radio" value="scuba-diver.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio scuba-diver" htmlFor="scuba-diver"></label>
+                        <input id="skater" type="radio" value="skater.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio skater" htmlFor="skater"></label>
+                        <input id="tennis-player-1" type="radio" value="tennis-player-1.png" name="avatars"  onChange={this.handleChange}/>
+                        <label className="avatarRadio tennis-player-1" htmlFor="tennis-player-1"></label>
                     </div>
                     <button type="submit"  className="btn btn-success" >Zarejestruj się</button>
                 </form>

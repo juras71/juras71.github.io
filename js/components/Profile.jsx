@@ -1,7 +1,5 @@
 import React from "react";
 import "../../css/profile.css"
-import "./../../images/avatars/avat1.png"
-import "./../../images/avatars/avat2.png"
 
 export default class Profile extends React.Component {
     constructor(props) {

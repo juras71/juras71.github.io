@@ -15,6 +15,9 @@
     margin-top: 1em;
     width: 15rem;
 }
+#signUpForm label,.loginForm label{
+    width: 100%;
+}
 .signUpBtn{
     width: 90%;
 }
@@ -96,6 +99,63 @@
 .boxer {
     background-image: url("./../images/avatars/boxer.png");
 }
+.baseball-player {
+    background-image: url("./../images/avatars/baseball-player.png");
+}
+.baseball-player-1 {
+    background-image: url("./../images/avatars/baseball-player-1.png");
+}
+.akebono-taro {
+    background-image: url("./../images/avatars/akebono-taro.png");
+}
+.akebono-taro-1 {
+    background-image: url("./../images/avatars/akebono-taro-1.png");
+}
+.american-football {
+    background-image: url("./../images/avatars/american-football.png");
+}
+.boxer-1 {
+    background-image: url("./../images/avatars/boxer-1.png");
+}
+.fitness-1 {
+    background-image: url("./../images/avatars/fitness-1.png");
+}
+.fitness-2 {
+    background-image: url("./../images/avatars/fitness-2.png");
+}
+.football {
+    background-image: url("./../images/avatars/football.png");
+}
+.gymnast-1 {
+    background-image: url("./../images/avatars/gymnast-1.png");
+}
+.hockey-player {
+    background-image: url("./../images/avatars/hockey-player.png");
+}
+.jockey {
+    background-image: url("./../images/avatars/jockey.png");
+}
+.parachuter {
+    background-image: url("./../images/avatars/parachuter.png");
+}
+.judo {
+    background-image: url("./../images/avatars/judo.png");
+}
+.rollers {
+    background-image: url("./../images/avatars/rollers.png");
+}
+.runner {
+    background-image: url("./../images/avatars/runner.png");
+}
+.scuba-diver {
+    background-image: url("./../images/avatars/scuba-diver.png");
+}
+.skater {
+    background-image: url("./../images/avatars/skater.png");
+}
+.tennis-player-1 {
+    background-image: url("./../images/avatars/tennis-player-1.png");
+}
 
 .avatarRadio {
 
@@ -105,7 +165,7 @@
     background-repeat: no-repeat;
     display: inline-block;
     height: 4em;
-    width: 3em;
+    width: 3em !important;
     transition: all 100ms ease-in;
     filter: brightness(1.8) grayscale(1) opacity(.7);}
 
