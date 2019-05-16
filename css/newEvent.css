@@ -67,10 +67,10 @@ li{
 @media(min-width:1024px) {
     .newGroupForm li input {
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1em;
     }
     .chooseSport{
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
 }
