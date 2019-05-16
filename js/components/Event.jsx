@@ -56,7 +56,6 @@ export default class Event extends React.Component {
 
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
         let members = eventInfo.members;
-        console.log(members);
         let loadMembers = fire.database().ref('users');
         loadMembers.on("value", (data) => {
             let eventUsers = []
@@ -102,7 +101,6 @@ export default class Event extends React.Component {
     render() {
         let eventInfo = this.props.eventInfo[localStorage.getItem('eventID').toString()];
         let date = new Date()
-        console.log(date.toLocaleDateString(),date.toLocaleTimeString())
 
         return (
             <div className="HolyGrail-content">

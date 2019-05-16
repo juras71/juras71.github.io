@@ -66,7 +66,7 @@ class Login extends Component {
             events : [''],
         };
         let addNewUser  = addUser.push(newUser);
-        console.log(addNewUser.key,'ten klucz zamiast ŁYSY');
+        console.log(addNewUser.key);
         localStorage.setItem('userid', this.state.email)
 
 
