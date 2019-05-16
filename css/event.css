@@ -1,9 +1,10 @@
 .eventHeader:hover {
-    font-size: 2em;
     color: firebrick;
     cursor: pointer;
 }
-
+.eventHeader{
+    width: 10em;
+}
 .sportLogo {
     width: 4em;
     float: left;
