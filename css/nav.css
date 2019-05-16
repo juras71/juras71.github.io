@@ -6,7 +6,7 @@
     color: black;
     text-shadow: 2px 1px 1px white;
     align-items: center;
-    background: linear-gradient(to right,rgba(144,175,197,1) 0%, rgba(144,175,197,1) 20%, rgba(74,89,186,1) 80%);
+    background: linear-gradient(to right,rgba(255,255,255,1) 0%, rgba(255,255,255,1) 80%, rgba(144,175,197,1) 80%);
     font-weight: bold;
     border-top: 2px solid white;
     position: relative;
@@ -14,10 +14,10 @@
     margin: auto;
     border-right: 2px solid white;
     border-left: 2px solid white;
+    width: 100vw;
 }
 .HolyGrail-nav>li:hover{
-    color: white ;
-    background: #336b87;
+    background: rgba(255,255,255,1);
     font-weight: bold;
     cursor: pointer;
 
@@ -98,18 +98,18 @@
 }
 @media (min-width: 1024px) {
     .HolyGrail-nav li {
-        margin-bottom: 10px;
-        padding: 5px;
-           text-align: center;
-        position: relative;
         width: unset;
+        margin-bottom: .8em;
+        padding: 5px;
+        text-align: center;
+        position: relative;
+        border-radius: .8em;
     }
     .HolyGrail-nav {
         background: #2A3132;
         position: absolute;
         z-index: 1;
         left: 1vh;
-        box-shadow: 0px 0px 5px 5px rgba(144, 175, 197,0.75);
 
     }
 }

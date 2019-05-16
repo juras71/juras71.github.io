@@ -97,14 +97,16 @@ body {
         margin-left: 18em;
         height: auto;
         min-height: 86vh;
-        box-shadow: 0 0 5px 5px rgba(144, 175, 197,0.75);
 
     }
 
     .HolyGrail-nav, .HolyGrail-ads {
         /* 12em is the width of the columns */
         flex: 0 0 12em;
-        margin: 1em .4em;
+        margin: 1.6em 0;
+        border: .6rem solid rgba(255,255,255,0.5);
+        border-radius: 1em;
+        padding: .1em;
     }
 
 

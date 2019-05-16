@@ -86,7 +86,6 @@
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    box-shadow: 0 0 5px 1px rgba(144, 175, 197, 0.75);
 }
 .subNavBtn:hover > .tooltip{
     right: 0;
@@ -248,7 +247,11 @@
     border: .2em solid firebrick;
 }
 .addComment button{
-
+    width: 10em;
+    height: 3em;
+    border: .4em solid rgba(255,255,255, 0.4);
+    background: rgba(255,255,255, 0.4);
+    border-radius: .5em;
 }
 
 @media (min-width: 1024px) {
