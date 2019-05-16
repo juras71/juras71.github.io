@@ -39,6 +39,12 @@
     border-radius: 5px;
     background: rgba(255,255,255,0.2);
     border: 2px solid rgba(255,255,255, 0.5);
+
+}
+@media (min-width: 1024px) {
+    .mainContent > li {
+        font-size: 2em;
+    }
 }
 
 

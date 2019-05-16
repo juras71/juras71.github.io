@@ -7,6 +7,15 @@
 .newGroupForm li label{
     display: inline-block;
 }
+.eventDate .dateTime{
+    display: inline-block;
+    width: 48%;
+}
+.eventDate{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
 
 li{
     margin-bottom: 10px;
@@ -19,6 +28,11 @@ li{
     height: 2em;
     border: 0;
     margin-top: 5px;
+}
+.chooseSport{
+    width: 100%;
+    border: rgba(255,255,255,0.2);;
+
 }
 #submitNewEventBtn{
     width: 10vh;
@@ -49,4 +63,14 @@ li{
 
         display: none;
     }
+}
+@media(min-width:1024px) {
+    .newGroupForm li input {
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .chooseSport{
+        font-size: 1.5em;
+    }
+
 }

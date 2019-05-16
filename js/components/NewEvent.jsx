@@ -90,31 +90,45 @@ export default class NewEvent extends React.Component {
                                     value={this.state.city}
                                     onChange={this.handleAdressChange}
                                 /></label></li>
-                            <li><label>Data:
+                            <li className="eventDate">
+                                <label
+                                className="dateTime"
+                            >Data:
                                 <input
                                 type="date"
                                 value={this.state.date}
                                 onChange={this.handleDateChange}
-                            /></label></li>
-                            <li><label>Czas:
-                                <input
-                                    type="time"
-                                    value={this.state.time}
-                                    onChange={this.handleTimeChange}
-                                /></label></li>
-                            <li><label>Ilość graczy:
+
+                            /></label>
+                                <label
+                                    className="dateTime"
+                                >Czas:
+                                    <input
+                                        type="time"
+                                        value={this.state.time}
+                                        onChange={this.handleTimeChange}
+
+                                    /></label></li>
+                            <li
+                                className="eventDate"
+                            ><label
+                                className="dateTime"
+                            >Ilość graczy:
                                 <input
                                 type="number"
                                 value={this.state.members}
                                 onChange={this.handleMembersChange}
-                                /> </label></li>
-                            <li><label>Sport:
+                                /> </label>
+                                <label
+                                    className="dateTime"
+                                >Sport:
                                 <select
                                     name="sports"
                                     className="chooseSport"
                                     value={this.state.sport}
-                                    onChange={this.handleSportChange}
+                                    onInput={this.handleSportChange}
                                 >
+                                    <option value="-">-</option>
                                     <option value="football">Piłka nożna</option>
                                     <option value="basketball">Koszykówka</option>
                                     <option value="tennis">Tenis ziemny</option>
