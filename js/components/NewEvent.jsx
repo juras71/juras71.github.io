@@ -20,6 +20,7 @@ export default class NewEvent extends React.Component {
     }
     handleNameChange = (event) => {
         this.setState({eventName: event.target.value});
+        localStorage.setItem('eventName',event.target.value)
     };
     handleAdressChange = (event) => {
         this.setState({city: event.target.value});
@@ -44,8 +45,14 @@ export default class NewEvent extends React.Component {
         submitNewEventBtn.style.animation = 'loading 2s 0s 1 none ';
         setTimeout(()=> { submitNewEventBtn.style.display='none'; }, 1500);
 
+        let date = new Date();
+        let intro =[
+            localStorage.getItem('avatar'),
+            `Witaj w wydarzeniu ${localStorage.getItem('eventName')}! Jeśli jesteś zainteresowany dołączeniem naciśnij zielony przycisk +`,
+            date.toLocaleTimeString(),
+            date.toLocaleDateString(),
+            localStorage.getItem('author')];
 
-        let intro = [this.props.userInfo.avatar,'Witajcie w wydarzeniu']
         const newEvent = {
             eventName : this.state.eventName,
             sport: this.state.sport,
