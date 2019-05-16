@@ -34,11 +34,13 @@
 }
 
 .mainContent > li {
-    margin-bottom: 20px;
+
+    margin-bottom: 1em;
     padding: .6em;
     border-radius: 18px;
     background: rgba(255,255,255,0.2);
-    border: 2px solid rgba(255,255,255, 0.5);
+    border: .3em solid rgba(255,255,255, 0.2);
+
 
 }
 @media (min-width: 1024px) {

@@ -23,7 +23,6 @@ li{
 .newGroupForm input,
 .chooseSport
 {
-    background-color: white;
     font-size: 16px;
     height: 2em;
     border: 0;
@@ -31,7 +30,7 @@ li{
 }
 .chooseSport{
     width: 100%;
-    border: rgba(255,255,255,0.2);;
+    background: rgba(255,255,255,0.5);
 
 }
 #submitNewEventBtn{
