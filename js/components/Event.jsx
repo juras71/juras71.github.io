@@ -34,9 +34,7 @@ export default class Event extends React.Component {
                 })
             }
 
-            console.log(eventInfo.members.indexOf(this.props.userInfo.id))
             if (eventInfo.members.indexOf(this.props.userInfo.id) === -1) {
-                console.log(eventInfo);
                 eventInfo.members.push(this.props.userInfo.id);
 
                 let joinEvent = fire.database().ref("events/" + localStorage.getItem('eventID').toString());

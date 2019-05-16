@@ -40,7 +40,6 @@ class Login extends Component {
     signup(e){
         e.preventDefault();
         fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-            console.log(u)
 
         }).catch((error) => {
                 console.log(error);
@@ -66,7 +65,6 @@ class Login extends Component {
             events : [''],
         };
         let addNewUser  = addUser.push(newUser);
-        console.log(addNewUser.key);
         localStorage.setItem('userid', this.state.email)
 
 
