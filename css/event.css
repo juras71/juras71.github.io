@@ -9,11 +9,9 @@
     width: 4em;
     float: left;
     margin-right: 0.8vh;
-    border-radius: 30%;
-    background: white;
-    border: 2px solid black;
-    box-shadow: 3px 3px darkslategrey;
-
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    padding: .15em;
 }
 
 
@@ -25,6 +23,7 @@
     background: white;
     border-bottom: 10px solid firebrick;
     box-shadow: 3px 3px darkslategrey;
+    padding: .1em .1em 0;
 }
 
 .slots {
@@ -168,6 +167,7 @@
     text-shadow: 2px 2px black;
     letter-spacing: 0.07em;
     font-size: 1.2em;
+    display: flex;
 }
 
 .commentBox {
@@ -283,5 +283,7 @@
         right: 0.22em;
         bottom: 0.85em;
     }
-
+    .eventName{
+        align-items: center;
+    }
 }

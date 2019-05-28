@@ -117,8 +117,13 @@ export default class Event extends React.Component {
 
 
                     <li className="evContainer">
-                        <h2 className="eventName"> {eventInfo.eventName}<img className="sportLogo" alt={eventInfo.sport}
-                                                       src={`./images/sports/${eventInfo.sport}.png`}/></h2>
+                        <h2 className="eventName">
+                            <img className="sportLogo"
+                                 alt={eventInfo.sport}
+                                 src={`./images/sports/${eventInfo.sport}.png`}/>
+                            {eventInfo.eventName}
+                        </h2>
+
                         <h3>Miasto : {eventInfo.city}</h3>
                         <h3>Data : {eventInfo.time[0]}</h3>
 
