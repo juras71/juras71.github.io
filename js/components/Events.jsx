@@ -28,8 +28,6 @@ export default class Events extends React.Component {
                                     </li>
                                     <li>
                                         Data : {eventInfo[key].time[0]}
-                                    </li>
-                                    <li>
                                         Godzina : {eventInfo[key].time[1]}
                                     </li>
                                     <li>

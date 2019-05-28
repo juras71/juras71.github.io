@@ -136,12 +136,21 @@ export default class Event extends React.Component {
                     </li>
 
                     <li className="slots hidden">
-                        {[...Array(this.state.eventUsers.length)].map((e, i) => <div className="userAv"><img
+                        {[...Array(this.state.eventUsers.length)].map((e, i) =>
+                            <div
+                                className="userAv"
+                                onMouseOver={(e)=>{
+                                    let rect = e.getBoundingClientRect();
+                                    console.log(rect);
+
+                                }}
+                            >
+                                <img
                             alt={this.state.eventUsers[i].username}
                             className="eventMember"
                             key={i}
                             src={`./images/avatars/${this.state.eventUsers[i].avatar}`}/>
-                            <div className="userDetails">
+                            <div className="userDetails hidden">
                                 <strong>{this.state.eventUsers[i].username}</strong>
                                 <span>Jego ulubiony sport to : {this.state.eventUsers[i].sports[0]}</span>
 
@@ -150,7 +159,7 @@ export default class Event extends React.Component {
                         </div>)}
                         {[...Array(parseInt(eventInfo.members[0]) - eventInfo.members.length + 1)].map((e, i) => <img
                             alt={eventInfo.sport} className="eventSlot" src={`./images/sports/${eventInfo.sport}.png`}
-                            key={i}/>)}
+                            key={i} id={i}/>)}
                         <button className="exitBtn"
                                 onClick={(e)=>this.closeComp(e)}>
                         </button>

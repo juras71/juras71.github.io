@@ -19,6 +19,7 @@
 
 .eventSlot, .eventMember {
     width: 2.9em;
+    height: 3.2em;
     margin: 0 0.22em;
     border-radius: 0 50% 0 0;
     background: white;
@@ -29,6 +30,8 @@
 .slots {
     margin-top: 1em;
     position: relative;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .slots:after {
@@ -146,11 +149,11 @@
     display: none;
     position: absolute;
     top: 3.7em;
-    right: -0.5em;
+    right: -11.9em;
     z-index: 10;
     background-color: #2A3132;
     box-shadow: 0 0 0 0.5em rgba(149, 153, 153,1);
-    width: 12em;
+    width: 15em;
     height: 15em;
     border-radius: 0 0 10% 10%;
 }
@@ -241,6 +244,7 @@
     border-radius: 10px;
     padding: .2em;
     background: rgba(255,255,255,0.5);
+    resize : none;
 }
 .addComment textarea:focus{
     background: white;
