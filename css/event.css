@@ -2,11 +2,8 @@
     color: firebrick;
     cursor: pointer;
 }
-.eventHeader{
-    width: 9em;
-}
 .sportLogo {
-    width: 4em;
+    width: 3em;
     float: left;
     margin-right: 0.8vh;
     border-radius: 50%;
@@ -167,6 +164,7 @@
     text-shadow: 2px 2px black;
     letter-spacing: 0.07em;
     font-size: 1.2em;
+    align-items: center;
     display: flex;
 }
 
@@ -245,6 +243,7 @@
     padding: .2em;
     background: rgba(255,255,255,0.5);
     resize : none;
+    margin-bottom: .5em;
 }
 .addComment textarea:focus{
     background: white;
@@ -263,14 +262,7 @@
 }
 
 @media (min-width: 1024px) {
-    .numInfo {
-        float: right;
-        position: absolute;
-        top: 1em;
-        right: 1em;
 
-
-    }
 
     .evContainer {
         font-size: 24px;
@@ -283,7 +275,15 @@
         right: 0.22em;
         bottom: 0.85em;
     }
-    .eventName{
-        align-items: center;
-    }
+
 }
+/*
+.numInfo {
+        float: right;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+
+
+    }
+ */
