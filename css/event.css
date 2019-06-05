@@ -276,6 +276,9 @@
         bottom: 0.85em;
     }
 
+    .subNavBtn{
+        height: 12em;
+    }
 }
 /*
 .numInfo {

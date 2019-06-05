@@ -13,7 +13,7 @@
 }
 .loginForm, .signUpBtn, #signUpForm{
     margin-top: 1em;
-    width: 15rem;
+
 }
 #signUpForm label,.loginForm label{
     width: 100%;
