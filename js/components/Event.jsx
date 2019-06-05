@@ -144,11 +144,6 @@ export default class Event extends React.Component {
                         {[...Array(this.state.eventUsers.length)].map((e, i) =>
                             <div
                                 className="userAv"
-                                onMouseOver={(e)=>{
-                                    let rect = e.getBoundingClientRect();
-                                    console.log(rect);
-
-                                }}
                             >
                                 <img
                             alt={this.state.eventUsers[i].username}
